@@ -1,6 +1,12 @@
 extends layout-front
 
 block content-front
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  br
+  br
+  section.Material-about-section.section-padding
+    .container
+      .row
+        .col-md-12.col-lg-12.col-xs-12
+          h1= message
+          h2= error.status
+          pre #{error.stack}
