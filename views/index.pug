@@ -1,0 +1,560 @@
+extends layout-front
+
+block content-front
+  #main-slide.carousel.slide(data-ride='carousel')
+    ol.carousel-indicators
+      li.active(data-target='#main-slide', data-slide-to='0')
+      li(data-target='#main-slide', data-slide-to='1')
+      li(data-target='#main-slide', data-slide-to='2')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='assets/images/slider/slider-bg1.jpg', alt='First slide')
+        .carousel-caption.d-md-block
+          h1.animated.wow.fadeInDown.hero-heading(data-wow-delay='.4s') Crafted with Bootstrap 4
+          h5.animated.fadeInUp.wow.hero-sub-heading(data-wow-delay='.6s') Material Design Meets With The Power of Bootstrap 4
+          a.animated.fadeInUp.wow.btn.btn-common(href='javascript:void(0)', data-wow-delay='.8s')
+            i.material-icons.mdi.mdi-lightbulb-outline
+            |  Explore
+            .ripple-container
+      .carousel-item
+        img.d-block.w-100(src='assets/images/slider/slider-bg2.jpg', alt='Second slide')
+        .carousel-caption.d-md-block
+          h1.animated.wow.fadeInLeft.hero-heading(data-wow-delay='.7s') Refreshing Material Design
+          h5.animated.wow.fadeInRight.hero-sub-heading(data-wow-delay='.9s') Extensively Customizable Tons of UI Elements
+          a.animated.fadeInUp.wow.btn.btn-common(href='javascript:void(0)', data-wow-delay='.6s')
+            i.material-icons.mdi.mdi-cart-outline
+            |  Purchase
+          a.animated.fadeInUp.wow.btn.btn-border(href='javascript:void(0)', data-wow-delay='.8s')
+            i.material-icons.mdi.mdi-lightbulb-outline
+            |  Learn More 
+            .ripple-container
+      .carousel-item
+        img.d-block.w-100(src='assets/images/slider/slider-bg3.jpg', alt='Third slide')
+        .carousel-caption.d-md-block
+          h1.animated.wow.fadeInDown.hero-heading(data-wow-delay='.6s') Multi-purpose Template
+          h5.animated.fadeInUp.wow.hero-sub-heading(data-wow-delay='.8s') Ready to Use for Business, Agency, Startup, Portfolio Sites and More...
+          a.animated.fadeInUp.wow.btn.btn-common(href='javascript:void(0)', data-wow-delay='.8s')
+            i.material-icons.mdi.mdi-arrow-collapse-down
+            |  Download Now
+    a.carousel-control-prev(href='index.html#main-slide', role='button', data-slide='prev')
+      span.carousel-control(aria-hidden='true')
+        i.mdi.mdi-arrow-left(data-ripple-color='#F0F0F0')
+      span.sr-only Previous
+    a.carousel-control-next(href='index.html#main-slide', role='button', data-slide='next')
+      span.carousel-control(aria-hidden='true')
+        i.mdi.mdi-arrow-right(data-ripple-color='#F0F0F0')
+      span.sr-only Next
+  section.Material-about-section.section-padding
+    .container
+      .row
+        .col-md-6.col-lg-3.col-xl-3.wow.animated.fadeInUp(data-wow-delay='.2s')
+          .about-single
+            i.material-icons.mdi.mdi-layers
+            h2.subtitle Bootstrap 4
+            p Excepteur sint occaecat cupidatat non proidt, sunt in culpa qui.
+        .col-md-6.col-lg-3.col-xl-3.wow.animated.fadeInUp(data-wow-delay='.3s')
+          .about-single
+            i.material-icons.mdi.mdi-cards-playing-outline
+            h2.subtitle Material Design
+            p Excepteur sint occaecat cupidatat non proidt, sunt in culpa qui.
+        .col-md-6.col-lg-3.col-xl-3.wow.animated.fadeInUp(data-wow-delay='.4s')
+          .about-single
+            i.material-icons.mdi.mdi-alarm-check
+            h2.subtitle Fast and Clean
+            p Excepteur sint occaecat cupidatat non proidt, sunt in culpa qui.
+        .col-md-6.col-lg-3.col-xl-3.wow.animated.fadeInUp(data-wow-delay='.5s')
+          .about-single
+            i.material-icons.mdi.mdi-responsive
+            h2.subtitle Fully Responsive
+            p Excepteur sint occaecat cupidatat non proidt, sunt in culpa qui.
+  section.welcome-section.section-padding.section-dark
+    .container
+      .row
+        .col-md-12.col-lg-7.col-xs-12
+          .Material-tab
+            ul#myTab.nav.nav-tabs.justify-content-center(role='tablist')
+              li.nav-item
+                a.nav-link.active(data-toggle='tab', href='index.html#business', role='tab')
+                  i.mdi.mdi-account-multiple-outline
+                  br
+                  |  Business
+              li.nav-item
+                a.nav-link(data-toggle='tab', href='index.html#startup', role='tab')
+                  i.mdi.mdi-flash-outline
+                  br
+                  | Startup
+              li.nav-item
+                a.nav-link(data-toggle='tab', href='index.html#agency', role='tab')
+                  i.mdi.mdi-all-inclusive
+                  br
+                  |  Agency
+              li.nav-item
+                a.nav-link(data-toggle='tab', href='index.html#saas', role='tab')
+                  i.mdi.mdi-cloud-outline
+                  br
+                  |  SaaS
+            .tab-content
+              #business.tab-pane.fade.show.active(role='tabpanel')
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.
+              #startup.tab-pane.fade(role='tabpanel')
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.
+              #agency.tab-pane.fade(role='tabpanel')
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.
+              #saas.tab-pane.fade(role='tabpanel')
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.
+        .col-md-12.col-lg-5.col-xs-12.welcome-column
+          .video-gallery
+            img.img-fluid(src='assets/images/about/video.jpg', alt='')
+            .overlay-gallery
+              .icon-holder
+                .icon
+                  a.video-popup.wow.fadeInUp(href='https://www.youtube.com/watch?v=r44RKWyfcFw', data-wow-duration='1000ms', data-wow-delay='0.3s')
+                    i.mdi.mdi-play-circle-outline
+  section.Material-service-section.section-padding
+    .container
+      .row
+        .col-md-12.wow.animated.fadeInLeft(data-wow-delay='.2s')
+          h1.section-title Why Choose
+      .row
+        .col-md-6.col-lg-4.col-xl-4.single-service-widget.wow.animated.fadeInUp(data-wow-delay='.3s')
+          .media
+            .media-left
+              i.material-icons.pulse-shrink.mdi.mdi-arrange-send-backward
+            .media-body
+              h2.subtitle
+                a(href='index.html#') Refreshing Design
+              p
+                | Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt
+        .col-md-6.col-lg-4.col-xl-4.single-service-widget.wow.animated.fadeInUp(data-wow-delay='.4s')
+          .media
+            .media-left
+              i.material-icons.pulse-shrink.mdi.mdi-code-tags-check
+            .media-body
+              h2.subtitle
+                a(href='index.html#') Solid Bootstrap 4
+              p
+                | Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt
+        .col-md-6.col-lg-4.col-xl-4.single-service-widget.wow.animated.fadeInUp(data-wow-delay='.5s')
+          .media
+            .media-left
+              i.material-icons.pulse-shrink.mdi.mdi-grid
+            .media-body
+              h2.subtitle
+                a(href='index.html#') 100+ Components
+              p
+                | Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt
+        .col-md-6.col-lg-4.col-xl-4.single-service-widget.wow.animated.fadeInUp(data-wow-delay='.6s')
+          .media
+            .media-left
+              i.material-icons.pulse-shrink.mdi.mdi-update
+            .media-body
+              h2.subtitle
+                a(href='index.html#') Regular Updates
+              p
+                | Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt
+        .col-md-6.col-lg-4.col-xl-4.single-service-widget.wow.animated.fadeInUp(data-wow-delay='.7s')
+          .media
+            .media-left
+              i.material-icons.pulse-shrink.mdi.mdi-speedometer
+            .media-body
+              h2.subtitle
+                a(href='index.html#') Speed Optimized
+              p
+                | Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt
+        .col-md-6.col-lg-4.col-xl-4.single-service-widget.wow.animated.fadeInUp(data-wow-delay='.8s')
+          .media
+            .media-left
+              i.material-icons.pulse-shrink.mdi.mdi-shape-plus
+            .media-body
+              h2.subtitle
+                a(href='index.html#') Fully Customizable
+              p
+                | Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt
+  section.Material-portfolio-section.section-padding.section-dark
+    .container
+      .row
+        .col-md-4.col-lg-4.col-xl-6.Material-title-section.wow.animated.fadeInLeft(data-wow-delay='.2s')
+          h1.section-title Featured Works
+        .col-md-8.col-lg-8.col-xl-6.portfolio-nav.mb-3.wow.animated.fadeInRight(data-wow-delay='.2s')
+          ul.nav.nav-pills
+            li
+              a.filter.active(data-filter='all') All
+            li
+              a.filter(data-filter='.business') Business
+            li
+              a.filter(data-filter='.development') Development
+            li
+              a.filter(data-filter='.creative') Creative
+            li
+              a.filter(data-filter='.more') More
+        #Material-portfolio.portfolio-item-wrapper.clearfix.wow.animated.fadeInUp(data-wow-delay='.5s')
+          .col-md-6.col-lg-4.col-xl-4.pb-4.mix.business
+            figure.single-portfolio
+              img.img-fluid(src='assets/images/portfolio/work1.jpg', alt='')
+              figcaption.hover-content
+                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+                  i.material-icons.mdi.mdi-arrow-right
+                  .ripple-container
+                a(href='portfolio-single.html')
+                  h2.subtitle Business Cards
+                p Asus Inc.
+          .col-md-6.col-lg-4.col-xl-4.mix.development.more
+            figure.single-portfolio
+              img.img-fluid(src='assets/images/portfolio/work2.jpg', alt='')
+              figcaption.hover-content
+                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+                  i.material-icons.mdi.mdi-arrow-right
+                  .ripple-container
+                a(href='portfolio-single.html')
+                  h2.subtitle Brochure Design
+                p Tesla Motors
+          .col-md-6.col-lg-4.col-xl-4.mix.creative.business
+            figure.single-portfolio
+              img.img-fluid(src='assets/images/portfolio/work3.jpg', alt='')
+              figcaption.hover-content
+                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+                  i.material-icons.mdi.mdi-arrow-right
+                  .ripple-container
+                a(href='portfolio-single.html')
+                  h2.subtitle Coffee Cup
+                p Starbucks USA
+          .col-md-6.col-lg-4.col-xl-4.mix.creative.more.development
+            figure.single-portfolio
+              img.img-fluid(src='assets/images/portfolio/work4.jpg', alt='')
+              figcaption.hover-content
+                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+                  i.material-icons.mdi.mdi-arrow-right
+                  .ripple-container
+                a(href='portfolio-single.html')
+                  h2.subtitle Landing Page
+                p Uniliver, India
+          .col-md-6.col-lg-4.col-xl-4.mix.more.development
+            figure.single-portfolio
+              img.img-fluid(src='assets/images/portfolio/work5.jpg', alt='')
+              figcaption.hover-content
+                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+                  i.material-icons.mdi.mdi-arrow-right
+                  .ripple-container
+                a(href='portfolio-single.html')
+                  h2.subtitle Dashboard Design
+                p Linode Inc.
+          .col-md-6.col-lg-4.col-xl-4.mix.creative.business
+            figure.single-portfolio
+              img.img-fluid(src='assets/images/portfolio/work6.jpg', alt='')
+              figcaption.hover-content
+                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+                  i.material-icons.mdi.mdi-arrow-right
+                  .ripple-container
+                a(href='portfolio-single.html')
+                  h2.subtitle Re-Branding
+                p Alphabet Inc.
+      .row.mt-4.wow.animated.fadeInUp(data-wow-delay='.3s')
+        .col-md-12.text-center
+          a.animated4.btn.btn-common(href='javascript:void(0)', data-ripple-color='#000')
+            i.material-icons.mdi.mdi-lightbulb-outline
+            |  Browse All
+            .ripple-container
+  section.work-counter-section.section-padding
+    .container
+      .row
+        .col-md-3.col-sm-6.work-counter-widget.text-center.wow.animated.fadeInUp(data-wow-delay='.2s')
+          .counter
+            .icon
+              i.material-icons.mdi.mdi-check-all
+            .timer 347
+            p Projects Done
+        .col-md-3.col-sm-6.work-counter-widget.text-center.wow.animated.fadeInUp(data-wow-delay='.3s')
+          .counter
+            .icon
+              i.material-icons.mdi.mdi-clock
+            .timer 8896
+            p Working Hours
+        .col-md-3.col-sm-6.work-counter-widget.text-center.wow.animated.fadeInUp(data-wow-delay='.4s')
+          .counter
+            .icon
+              i.material-icons.mdi.mdi-account-multiple-outline
+            .timer 35
+            p Team Members
+        .col-md-3.col-sm-6.work-counter-widget.text-center.wow.animated.fadeInUp(data-wow-delay='.5s')
+          .counter
+            .icon
+              i.material-icons.mdi.mdi-sticker-emoji
+            .timer 233
+            p Happy Clients
+  section.team.section-padding.section-dark
+    .container
+      .row
+        .col-md-12.wow.animated.fadeInLeft(data-wow-delay='.2s')
+          h1.section-title Meet The Team
+      .row
+        .col-md-6.col-lg-3.col-xl-3.wow.animated.fadeInUp(data-wow-delay='.3s')
+          .single-team-widget
+            img.img-fluid(src='assets/images/team/team1.jpg', alt='')
+            .team-member-info
+              .know-more
+                a.btn.btn-round.btn-fab.btn-xs(href='javascript:void(0)')
+                  i.material-icons.mdi.mdi-arrow-right
+                  .ripple-container
+              h2.subtitle Rob Percy
+              p Co-Founder
+              .social-profiles
+                a(href='index.html#')
+                  i.mdi.mdi-twitter
+                a(href='index.html#')
+                  i.mdi.mdi-facebook
+                a(href='index.html#')
+                  i.mdi.mdi-dribbble
+                a(href='index.html#')
+                  i.mdi.mdi-linkedin
+        .col-md-6.col-lg-3.col-xl-3.wow.animated.fadeInUp(data-wow-delay='.4s')
+          .single-team-widget
+            img.img-fluid(src='assets/images/team/team2.jpg', alt='')
+            .team-member-info
+              .know-more
+                a.btn.btn-round.btn-fab.btn-xs(href='javascript:void(0)')
+                  i.material-icons.mdi.mdi-arrow-right
+                  .ripple-container
+              h2.subtitle Jennifer L.
+              p Graphic Designer
+              .social-profiles
+                a(href='index.html#')
+                  i.mdi.mdi-twitter
+                a(href='index.html#')
+                  i.mdi.mdi-facebook
+                a(href='index.html#')
+                  i.mdi.mdi-dribbble
+                a(href='index.html#')
+                  i.mdi.mdi-linkedin
+        .col-md-6.col-lg-3.col-xl-3.wow.animated.fadeInUp(data-wow-delay='.5s')
+          .single-team-widget
+            img.img-fluid(src='assets/images/team/team3.jpg', alt='')
+            .team-member-info
+              .know-more
+                a.btn.btn-round.btn-fab.btn-xs(href='javascript:void(0)')
+                  i.material-icons.mdi.mdi-arrow-right
+                  .ripple-container
+              h2.subtitle Tom Hanks.
+              p SEO Speacialist
+              .social-profiles
+                a(href='index.html#')
+                  i.mdi.mdi-twitter
+                a(href='index.html#')
+                  i.mdi.mdi-facebook
+                a(href='index.html#')
+                  i.mdi.mdi-dribbble
+                a(href='index.html#')
+                  i.mdi.mdi-linkedin
+        .col-md-6.col-lg-3.col-xl-3.wow.animated.fadeInUp(data-wow-delay='.6s')
+          .single-team-widget
+            img.img-fluid(src='assets/images/team/team4.jpg', alt='')
+            .team-member-info
+              .know-more
+                a.btn.btn-round.btn-fab.btn-xs(href='javascript:void(0)')
+                  i.material-icons.mdi.mdi-arrow-right
+                  .ripple-container
+              h2.subtitle Emma Watson
+              p Head Of Ideas
+              .social-profiles
+                a(href='index.html#')
+                  i.mdi.mdi-twitter
+                a(href='index.html#')
+                  i.mdi.mdi-facebook
+                a(href='index.html#')
+                  i.mdi.mdi-dribbble
+                a(href='index.html#')
+                  i.mdi.mdi-linkedin
+  .testimonial.section-padding
+    .container
+      .row
+        .testimonials-carousel.owl-carousel
+          .item
+            .testimonial-item
+              .datils
+                h5 Adam Schwartz
+                span Software Articulate, Google
+                p
+                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                  br
+                  |  standard dummy text ever since the 1500s Lorem Ipsum.
+              .img
+                a(href='index.html#')
+                  img.img-fluid(src='assets/images/testimonial/author1.jpg', alt='')
+          .item
+            .testimonial-item
+              .datils
+                h5 Clark Brown
+                span Brand Managerr
+                p
+                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                  br
+                  |  standard dummy text ever since the 1500s Lorem Ipsum.
+              .img
+                a(href='index.html#')
+                  img.img-fluid(src='assets/images/testimonial/author2.jpg', alt='')
+          .item
+            .testimonial-item
+              .datils
+                h5 Ana Blunt
+                span Creative Director
+                p
+                  | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                  br
+                  |  standard dummy text ever since the 1500s Lorem Ipsum.
+              .img
+                a(href='index.html#')
+                  img.img-fluid(src='assets/images/testimonial/author3.jpg', alt='')
+  .client.section-padding.section-dark
+    .container
+      .row
+        #client-logo.owl-carousel
+          .client-logo.item
+            a(href='index.html#')
+              img.img-fluid(src='assets/images/clients/client1.png', alt='')
+          .client-logo.item
+            a(href='index.html#')
+              img.img-fluid(src='assets/images/clients/client2.png', alt='')
+          .client-logo.item
+            a(href='index.html#')
+              img.img-fluid(src='assets/images/clients/client3.png', alt='')
+          .client-logo.item
+            a(href='index.html#')
+              img.img-fluid(src='assets/images/clients/client4.png', alt='')
+          .client-logo.item
+            a(href='index.html#')
+              img.img-fluid(src='assets/images/clients/client1.png', alt='')
+          .client-logo.item
+            a(href='index.html#')
+              img.img-fluid(src='assets/images/clients/client2.png', alt='')
+          .client-logo.item
+            a(href='index.html#')
+              img.img-fluid(src='assets/images/clients/client3.png', alt='')
+          .client-logo.item
+            a(href='index.html#')
+              img.img-fluid(src='assets/images/clients/client4.png', alt='')
+  section.Material-blog-section.section-padding
+    .container
+      .row
+        .col-md-12.wow.animated.fadeInLeft(data-wow-delay='.2s')
+          h1.section-title From The Blog
+      .row
+        .col-md-6.col-lg-4.col-xl-4.wow.animated.fadeInUp(data-wow-delay='.3s')
+          article.single-blog-post
+            .featured-image
+              a(href='index.html#')
+                img(src='assets/images/blog/featured1.jpg', alt='')
+            .post-meta
+              a(href='blog-single.html')
+                h2.subtitle 12+ Amazing Growth Hacking Tips and Tricks
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
+            .meta-tags
+              span.comments
+                a(href='index.html#')
+                  i.mdi.mdi-comment-outline
+                  |  24 Comments
+              a.btn.btn-round.btn-fab(href='blog-single.html')
+                i.material-icons.mdi.mdi-arrow-right
+                .ripple-container
+        .col-md-6.col-lg-4.col-xl-4.wow.animated.fadeInUp(data-wow-delay='.4s')
+          article.single-blog-post
+            .featured-image
+              a(href='index.html#')
+                img(src='assets/images/blog/featured2.jpg', alt='')
+            .post-meta
+              a(href='blog-single.html')
+                h2.subtitle 10 Tips to Validate Your Next Startup Idea
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
+            .meta-tags
+              span.comments
+                a(href='index.html#')
+                  i.mdi.mdi-comment-outline
+                  |  24 Comments
+              a.btn.btn-round.btn-fab(href='blog-single.html')
+                i.material-icons.mdi.mdi-arrow-right
+                .ripple-container
+        .col-md-6.col-lg-4.col-xl-4.wow.animated.fadeInUp(data-wow-delay='.5s')
+          article.single-blog-post
+            .featured-image
+              a(href='index.html#')
+                img(src='assets/images/blog/featured3.jpg', alt='')
+            .post-meta
+              a(href='blog-single.html')
+                h2.subtitle How to Create Successful Website for Your Agency
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
+            .meta-tags
+              span.comments
+                a(href='index.html#')
+                  i.mdi.mdi-comment-outline
+                  |  24 Comments
+              a.btn.btn-round.btn-fab(href='blog-single.html')
+                i.material-icons.mdi.mdi-arrow-right
+                .ripple-container
+      .row.mt-5.wow.animated.fadeInUp(data-wow-delay='.6s')
+        .col-md-12.text-center
+          a.animated4.btn.btn-common(href='blog.html', data-ripple-color='#000')
+            i.material-icons.mdi.mdi-library-books
+            |  Explore More on Blog
+            .ripple-container
+  section.Material-contact-section.section-padding.section-dark
+    .container
+      .row
+        .col-md-12.wow.animated.fadeInLeft(data-wow-delay='.2s')
+          h1.section-title Love to Hear From You
+      .row
+        .col-md-6.mt-3.contact-widget-section2.wow.animated.fadeInLeft(data-wow-delay='.2s')
+          p
+            | It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content.
+          .find-widget
+            a(href='index.html#')
+              i.material-icons.mdi.mdi-map-marker
+              | 4435 Berkshire Circle Knoxville
+          .find-widget
+            a(href='index.html#')
+              i.material-icons.mdi.mdi-phone
+              |  + 879-890-9767
+          .find-widget
+            a(href='index.html#')
+              i.material-icons.mdi.mdi-email-open.mr-3
+              span.__cf_email__(data-cfemail='7c0f090c0c130e083c311d08190e151d10521f1311') [email protected]
+          .find-widget
+            a(href='index.html#')
+              i.material-icons.mdi.mdi-clock
+              |  Mon to Sat: 09:30 AM - 10.30 PM
+        .col-md-6.wow.animated.fadeInRight(data-wow-delay='.2s')
+          form#contactForm.shake(role='form', method='post', name='contact-form', data-toggle='validator')
+            .form-group.label-floating
+              label.control-label(for='name') Name
+              input#name.form-control(type='text', name='name', required='', data-error='Please enter your name')
+              .help-block.with-errors
+            .form-group.label-floating
+              label.control-label(for='email') Email
+              input#email.form-control(type='email', name='email', required='', data-error='Please enter your Email')
+              .help-block.with-errors
+            .form-group.label-floating
+              label.control-label Subject
+              input#msg_subject.form-control(type='text', name='subject', required='', data-error='Please enter your message subject')
+              .help-block.with-errors
+            .form-group.label-floating
+              label.control-label(for='message') Message
+              textarea#message.form-control(rows='3', name='message', required='', data-error='Write your message')
+              .help-block.with-errors
+            .form-submit.mt-5
+              button#form-submit.btn.btn-common(type='submit')
+                i.material-icons.mdi.mdi-message-outline
+                |  Send Message
+              #msgSubmit.h3.text-center.hidden
+              .clearfix
