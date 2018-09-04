@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var mSliders = require('../models/sliders')
+
 /* GET home page. */
 router.get('/login', function(req, res, next) {
   res.render('login-backend', { title: 'Sign in to start your session' });
@@ -27,5 +29,11 @@ router.post('/login', (req, res, next)=>{
 router.get('/dashboard', (req, res, next)=>{
 	res.render('dashboard-backend')
 })
+
+router.get('/sliders/all', mSliders.getAllSliders);
+router.get('/slider/one/:id', mSliders.getOneSlider);
+router.get('/sliders/create', mSliders.createSlider);
+router.get('/sliders/remove/:id', mSliders.removeOneSlider);
+router.get('/sliders/update/:id', mSliders.updateSlider);
 
 module.exports = router;
