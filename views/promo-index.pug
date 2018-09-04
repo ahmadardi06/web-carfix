@@ -3,15 +3,15 @@ extend layout-backend
 block content-back
   section.content-header
     h1
-      | List All Networks
-      small you can manage the networks
+      | List All Promo
+      small you can manage the promo
     ol.breadcrumb
       li
         a(href='http://localhost:3000/administrator/dashboard')
           i.fa.fa-dashboard
           |  Home
       li
-        a(href='http://localhost:3000/networks-backend/index') Networks
+        a(href='http://localhost:3000/promo-backend/index') Promo
       li.active Data tables
 
   .content
@@ -19,9 +19,9 @@ block content-back
       .col-xs-12
         .box
           .box-header
-            a.btn.btn-primary(href='http://localhost:3000/networks-backend/form') 
+            a.btn.btn-primary(href='http://localhost:3000/promo-backend/form') 
               i.fa.fa-plus
-              | &nbsp; Add Network
+              | &nbsp; Add Promo
           .box-body
             table.dataTableDynamic.table.table-bordered.table-striped
               thead

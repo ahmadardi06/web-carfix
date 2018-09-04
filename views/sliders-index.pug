@@ -35,13 +35,17 @@ block content-back
                   th action
               tbody
                 each dd, i in dataSliders
+                  if dd.display === 'n'
+                    -var disp = "<a href='http://localhost:3000/sliders-backend/display/"+dd.id_slider+"/"+dd.display+"' class='btn btn-sm btn-danger'>No</a>"
+                  else
+                    -var disp = "<a href='http://localhost:3000/sliders-backend/display/"+dd.id_slider+"/"+dd.display+"' class='btn btn-sm btn-success'>Yes</a>"
                   tr
                     td= (i+1)
                     td= dd.title
                     td= dd.description
                     td= dd.file
                     //- td= dd.create_at
-                    td= (dd.display === 'n' ? 'No':'Yes')
+                    td !{disp}
                     td
                       a.btn.btn-sm.btn-warning(href='http://localhost:3000/sliders-backend/form/'+dd.id_slider)
                         i.fa.fa-edit

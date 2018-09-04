@@ -1,0 +1,35 @@
+extend layout-backend
+
+block content-back
+  section.content-header
+    h1
+      | Form Create Network
+      small you can manage the networks
+    ol.breadcrumb
+      li
+        a(href='http://localhost:3000/administrator/dashboard')
+          i.fa.fa-dashboard
+          |  Home
+      li
+        a(href='http://localhost:3000/networks-backend/index') Networks
+      li.active Data tables
+
+  .content
+    .row
+      .col-xs-12
+        .box
+          .box-header
+            a.btn.btn-primary(href='http://localhost:3000/networks-backend/index') 
+              i.fa.fa-toggle-left
+              | &nbsp; Back
+            form(method='post', action=formData.action, role='form')
+                .box-body
+                    .form-group
+                        label Title
+                        input(type='hidden', name='id', value=formData.id)
+                        input.form-control(type='text', name='title', placeholder='enter title', required, value=formData.title)
+                    .form-group
+                        label Link
+                        input.form-control(type='text', name='link', placeholder='enter link', required, value=formData.link)
+                    .form-group
+                        input.btn.btn-success(type='submit', name='submit', value='Save Network')
