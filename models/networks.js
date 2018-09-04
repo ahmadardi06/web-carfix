@@ -9,7 +9,7 @@ exports.getAllNetworks = (req, res, next) => {
 	})
 }
 
-exports.getOneNetworks = (req, res, next) => {
+exports.getOneNetwork = (req, res, next) => {
 	var networks = new dNetworks();
 	networks.find('all', {where: "id = '" + req.params.id + "'"}, (err, rows, fields) => {
 		if(err) throw new Error(err)

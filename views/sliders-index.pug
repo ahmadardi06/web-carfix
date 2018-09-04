@@ -18,6 +18,10 @@ block content-back
     .row
       .col-xs-12
         .box
+          .box-header
+            a.btn.btn-primary(href='http://localhost:3000/sliders-backend/form') 
+              i.fa.fa-plus
+              | &nbsp; Add Slider
           .box-body
             table.dataTableDynamic.table.table-bordered.table-striped
               thead
@@ -26,8 +30,9 @@ block content-back
                   th Title
                   th Description
                   th File
-                  th Create At
+                  //- th Create At
                   th Display
+                  th action
               tbody
                 each dd, i in dataSliders
                   tr
@@ -35,5 +40,13 @@ block content-back
                     td= dd.title
                     td= dd.description
                     td= dd.file
-                    td= dd.create_at
-                    td= dd.display
+                    //- td= dd.create_at
+                    td= (dd.display === 'n' ? 'No':'Yes')
+                    td
+                      a.btn.btn-sm.btn-warning(href='http://localhost:3000/sliders-backend/form/'+dd.id_slider)
+                        i.fa.fa-edit
+                        | &nbsp; update
+                      | &nbsp;
+                      a.btn.btn-sm.btn-danger(href='http://localhost:3000/sliders-backend/remove/'+dd.id_slider)
+                        i.fa.fa-edit
+                        | &nbsp; delete
