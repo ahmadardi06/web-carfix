@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Carfix | Log in
+    meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no', name='viewport')
+    link(rel='stylesheet', href='http://localhost:3000/admin/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='http://localhost:3000/admin/bower_components/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='http://localhost:3000/admin/bower_components/Ionicons/css/ionicons.min.css')
+    link(rel='stylesheet', href='http://localhost:3000/admin/dist/css/AdminLTE.min.css')
+    link(rel='stylesheet', href='http://localhost:3000/admin/plugins/iCheck/square/blue.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic')
+  body.hold-transition.login-page
+    .login-box
+      .login-box-body.text-center
+        a(href='http://localhost:3000/administrator/login')
+          img(src='http://localhost:3000/assets/images/logo/logo-carfix.png')
+        p.login-box-msg !{title} 
+        form(action='http://localhost:3000/administrator/login', method='post')
+          .form-group.has-feedback
+            input.form-control(type='email', placeholder='Email', name='userEmail', value='ardiansyah3ber@gmail.com')
+            span.glyphicon.glyphicon-envelope.form-control-feedback
+          .form-group.has-feedback
+            input.form-control(type='password', placeholder='Password', name='userPassword', value='ardiansyah3ber')
+            span.glyphicon.glyphicon-lock.form-control-feedback
+          .row
+            .col-xs-8
+              .checkbox.icheck
+                label
+                  input(type='checkbox')
+                  |  Remember Me
+            .col-xs-4
+              button.btn.btn-primary.btn-block.btn-flat(type='submit') Sign In
+        .social-auth-links.text-center
+          p - OR -
+          a.btn.btn-block.btn-social.btn-facebook.btn-flat(href='#')
+            i.fa.fa-facebook
+            |  Sign in using
+            |         Facebook
+          a.btn.btn-block.btn-social.btn-google.btn-flat(href='#')
+            i.fa.fa-google-plus
+            |  Sign in using
+            |         Google+
+        a.text-center(href='#') Register a new membership
+        br
+        a(href='http://localhost:3000/') Back to home page
+    script(src='http://localhost:3000/admin/bower_components/jquery/dist/jquery.min.js')
+    script(src='http://localhost:3000/admin/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='http://localhost:3000/admin/plugins/iCheck/icheck.min.js')
+    script.
+      $(function () {
+      $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
+      });
+      });

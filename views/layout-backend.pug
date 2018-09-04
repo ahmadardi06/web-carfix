@@ -1,0 +1,356 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title CARfix | Dashboard
+    meta(content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no', name='viewport')
+    link(rel='stylesheet', href='http://localhost:3000/admin/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='http://localhost:3000/admin/bower_components/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='http://localhost:3000/admin/bower_components/Ionicons/css/ionicons.min.css')
+    link(rel='stylesheet', href='http://localhost:3000/admin/dist/css/AdminLTE.min.css')
+    link(rel='stylesheet', href='http://localhost:3000/admin/dist/css/skins/_all-skins.min.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic')
+  body.hold-transition.skin-red.fixed.sidebar-mini
+    .wrapper
+      header.main-header
+        a.logo(href='http://localhost:3000/dashboard')
+          span.logo-mini
+            b C
+            | FIX
+          img(src="http://localhost:3000/assets/images/logo/logo-carfix-small.png", class='img-responsive', style='width: 150px; margin: 3px auto;')
+        nav.navbar.navbar-static-top
+          a.sidebar-toggle(href='#', data-toggle='push-menu', role='button')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          .navbar-custom-menu
+            ul.nav.navbar-nav
+              // Messages: style can be found in dropdown.less
+              li.dropdown.messages-menu
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  i.fa.fa-envelope-o
+                  span.label.label-success 4
+                ul.dropdown-menu
+                  li.header You have 4 messages
+                  li
+                    // inner menu: contains the actual data
+                    ul.menu
+                      li
+                        // start message
+                        a(href='#')
+                          .pull-left
+                            img.img-circle(src='http://localhost:3000/admin/dist/img/user2-160x160.jpg', alt='User Image')
+                          h4
+                            | Support Team
+                            small
+                              i.fa.fa-clock-o
+                              |  5 mins
+                          p Why not buy a new awesome theme?
+                      // end message
+                  li.footer
+                    a(href='#') See All Messages
+              // Notifications: style can be found in dropdown.less
+              li.dropdown.notifications-menu
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  i.fa.fa-bell-o
+                  span.label.label-warning 10
+                ul.dropdown-menu
+                  li.header You have 10 notifications
+                  li
+                    // inner menu: contains the actual data
+                    ul.menu
+                      li
+                        a(href='#')
+                          i.fa.fa-users.text-aqua
+                          |  5 new members joined today
+                  li.footer
+                    a(href='#') View all
+              // Tasks: style can be found in dropdown.less
+              li.dropdown.tasks-menu
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  i.fa.fa-flag-o
+                  span.label.label-danger 9
+                ul.dropdown-menu
+                  li.header You have 9 tasks
+                  li
+                    // inner menu: contains the actual data
+                    ul.menu
+                      li
+                        a(href='#')
+                          h3
+                            | Design some buttons
+                            small.pull-right 20%
+                          .progress.xs
+                            .progress-bar.progress-bar-aqua(style='width: 20%', role='progressbar', aria-valuenow='20', aria-valuemin='0', aria-valuemax='100')
+                              span.sr-only 20% Complete
+                  li.footer
+                    a(href='#') View all tasks
+              li.dropdown.user.user-menu
+                a.dropdown-toggle(href='#', data-toggle='dropdown')
+                  img.user-image(src='http://localhost:3000/admin/dist/img/user2-160x160.jpg', alt='User Image')
+                  span.hidden-xs Alexander Pierce
+                ul.dropdown-menu
+                  li.user-header
+                    img.img-circle(src='http://localhost:3000/admin/dist/img/user2-160x160.jpg', alt='User Image')
+                    p
+                      | Administrator - Web Developer
+                      small Member since Nov. 2018
+                  li.user-footer
+                    .pull-left
+                      a.btn.btn-default.btn-flat(href='http://localhost:3000/profile-backend/index') Profile
+                    .pull-right
+                      a.btn.btn-default.btn-flat(href='http://localhost:3000/administrator/login') Sign out
+
+      aside.main-sidebar
+        section.sidebar
+          .user-panel
+            .pull-left.image
+              img.img-circle(src='http://localhost:3000/admin/dist/img/user2-160x160.jpg', alt='User Image')
+            .pull-left.info
+              p Ahmad Ardiansyah
+              a(href='#')
+                i.fa.fa-circle.text-success
+                |  Online
+
+          ul.sidebar-menu(data-widget='tree')
+            li.header MAIN NAVIGATION
+            li
+              a(href='http://localhost:3000/administrator/dashboard')
+                i.fa.fa-dashboard
+                span Dashboard
+                span.pull-right-container
+                  small.label.pull-right.bg-green new
+            li.treeview
+              a(href='#')
+                i.fa.fa-slideshare
+                span Sliders
+                span.pull-right-container
+                  i.fa.fa-angle-left.pull-right
+              ul.treeview-menu
+                li
+                  a(href='http://localhost:3000/sliders-backend/index')
+                    i.fa.fa-circle-o
+                    |  All Sliders
+                li
+                  a(href='http://localhost:3000/sliders-backend/form')
+                    i.fa.fa-circle-o
+                    |  Add Slider
+            li.treeview
+              a(href='#')
+                i.fa.fa-share-alt
+                span Networks
+                span.pull-right-container
+                  i.fa.fa-angle-left.pull-right
+              ul.treeview-menu
+                li
+                  a(href='http://localhost:3000/networks-backend/index')
+                    i.fa.fa-circle-o
+                    |  All Networks
+                li
+                  a(href='http://localhost:3000/networks-backend/form')
+                    i.fa.fa-circle-o
+                    |  Add Networks
+            li.treeview
+              a(href='#')
+                i.fa.fa-gift
+                span Promo
+                span.pull-right-container
+                  i.fa.fa-angle-left.pull-right
+              ul.treeview-menu
+                li
+                  a(href='http://localhost:3000/promo-backend/index')
+                    i.fa.fa-circle-o
+                    |  All Promo
+                li
+                  a(href='http://localhost:3000/promo-backend/form')
+                    i.fa.fa-circle-o
+                    |  Add Promo
+            li.treeview
+              a(href='#')
+                i.fa.fa-thumbs-up
+                span Tips & Trick
+                span.pull-right-container
+                  i.fa.fa-angle-left.pull-right
+              ul.treeview-menu
+                li
+                  a(href='http://localhost:3000/tipsntrick-backend/index')
+                    i.fa.fa-circle-o
+                    |  All Tips & Trick
+                li
+                  a(href='http://localhost:3000/tipsntrick-backend/form')
+                    i.fa.fa-circle-o
+                    |  Add Tips & Trick
+            li.treeview
+              a(href='#')
+                i.fa.fa-newspaper-o
+                span Event & News
+                span.pull-right-container
+                  i.fa.fa-angle-left.pull-right
+              ul.treeview-menu
+                li
+                  a(href='http://localhost:3000/eventnnews-backend/index')
+                    i.fa.fa-circle-o
+                    |  All Event & News
+                li
+                  a(href='http://localhost:3000/eventnnews-backend/form')
+                    i.fa.fa-circle-o
+                    |  Add Event & News
+            li.header STATIC PAGES
+            li
+              a(href='http://localhost:3000/products-backend/index')
+                i.fa.fa-briefcase
+                span Products
+                span.pull-right-container
+                  small.label.pull-right.bg-yellow change
+            li
+              a(href='http://localhost:3000/contactus-backend/index')
+                i.fa.fa-university
+                span Contact Us
+                span.pull-right-container
+                  small.label.pull-right.bg-yellow change
+            li.header SETTING USERS
+            li.treeview
+              a(href='#')
+                i.fa.fa-users
+                span Users
+                span.pull-right-container
+                  small.label.pull-right.bg-blue 4
+              ul.treeview-menu
+                li
+                  a(href='http://localhost:3000/users-backend/index')
+                    i.fa.fa-circle-o
+                    |  All Users
+                li
+                  a(href='http://localhost:3000/users-backend/form')
+                    i.fa.fa-circle-o
+                    |  Add Users
+
+      .content-wrapper
+        block content-back
+
+      footer.main-footer
+        .pull-right.hidden-xs
+          b Version
+          |  2.4.0
+        strong
+          | Copyright © 2014-2016 
+          a(href='https://adminlte.io') Almsaeed Studio
+          | .
+        |  All rights
+        |     reserved.
+      aside.control-sidebar.control-sidebar-dark
+        ul.nav.nav-tabs.nav-justified.control-sidebar-tabs
+          li
+            a(href='#control-sidebar-home-tab', data-toggle='tab')
+              i.fa.fa-home
+          li
+            a(href='#control-sidebar-settings-tab', data-toggle='tab')
+              i.fa.fa-gears
+        .tab-content
+          #control-sidebar-home-tab.tab-pane
+            h3.control-sidebar-heading Recent Activity
+            ul.control-sidebar-menu
+              li
+                a(href='javascript:void(0)')
+                  i.menu-icon.fa.fa-birthday-cake.bg-red
+                  .menu-info
+                    h4.control-sidebar-subheading Langdon's Birthday
+                    p Will be 23 on April 24th
+              li
+                a(href='javascript:void(0)')
+                  i.menu-icon.fa.fa-user.bg-yellow
+                  .menu-info
+                    h4.control-sidebar-subheading Frodo Updated His Profile
+                    p New phone +1(800)555-1234
+              li
+                a(href='javascript:void(0)')
+                  i.menu-icon.fa.fa-envelope-o.bg-light-blue
+                  .menu-info
+                    h4.control-sidebar-subheading Nora Joined Mailing List
+                    p nora@example.com
+              li
+                a(href='javascript:void(0)')
+                  i.menu-icon.fa.fa-file-code-o.bg-green
+                  .menu-info
+                    h4.control-sidebar-subheading Cron Job 254 Executed
+                    p Execution time 5 seconds
+            h3.control-sidebar-heading Tasks Progress
+            ul.control-sidebar-menu
+              li
+                a(href='javascript:void(0)')
+                  h4.control-sidebar-subheading
+                    | Custom Template Design
+                    span.label.label-danger.pull-right 70%
+                  .progress.progress-xxs
+                    .progress-bar.progress-bar-danger(style='width: 70%')
+              li
+                a(href='javascript:void(0)')
+                  h4.control-sidebar-subheading
+                    | Update Resume
+                    span.label.label-success.pull-right 95%
+                  .progress.progress-xxs
+                    .progress-bar.progress-bar-success(style='width: 95%')
+              li
+                a(href='javascript:void(0)')
+                  h4.control-sidebar-subheading
+                    | Laravel Integration
+                    span.label.label-warning.pull-right 50%
+                  .progress.progress-xxs
+                    .progress-bar.progress-bar-warning(style='width: 50%')
+              li
+                a(href='javascript:void(0)')
+                  h4.control-sidebar-subheading
+                    | Back End Framework
+                    span.label.label-primary.pull-right 68%
+                  .progress.progress-xxs
+                    .progress-bar.progress-bar-primary(style='width: 68%')
+
+          #control-sidebar-stats-tab.tab-pane Stats Tab Content
+
+          #control-sidebar-settings-tab.tab-pane
+            form(method='post')
+              h3.control-sidebar-heading General Settings
+              .form-group
+                label.control-sidebar-subheading
+                  | Report panel usage
+                  input.pull-right(type='checkbox', checked='')
+                p
+                  | Some information about this general settings option
+              .form-group
+                label.control-sidebar-subheading
+                  | Allow mail redirect
+                  input.pull-right(type='checkbox', checked='')
+                p
+                  | Other sets of options are available
+              .form-group
+                label.control-sidebar-subheading
+                  | Expose author name in posts
+                  input.pull-right(type='checkbox', checked='')
+                p
+                  | Allow the user to show his name in blog posts
+              h3.control-sidebar-heading Chat Settings
+              .form-group
+                label.control-sidebar-subheading
+                  | Show me as online
+                  input.pull-right(type='checkbox', checked='')
+              .form-group
+                label.control-sidebar-subheading
+                  | Turn off notifications
+                  input.pull-right(type='checkbox')
+              .form-group
+                label.control-sidebar-subheading
+                  | Delete chat history
+                  a.text-red.pull-right(href='javascript:void(0)')
+                    i.fa.fa-trash-o
+        Add the sidebar's background. This div must be placed
+        immediately after the control sidebar
+      .control-sidebar-bg
+
+    script(src='http://localhost:3000/admin/bower_components/jquery/dist/jquery.min.js')
+    script(src='http://localhost:3000/admin/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    script(src='http://localhost:3000/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js')
+    script(src='http://localhost:3000/admin/bower_components/fastclick/lib/fastclick.js')
+    script(src='http://localhost:3000/admin/dist/js/adminlte.min.js')
+    script(src='http://localhost:3000/admin/dist/js/demo.js')

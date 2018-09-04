@@ -1,0 +1,30 @@
+extends layout-backend
+
+block content-back
+  section.content-header
+    h1 Welcome to Dashboard Carfix
+    ol.breadcrumb
+      li
+        a(href='http://localhost:3000/administrator/dashboard')
+          i.fa.fa-dashboard
+          |  Administrator
+      li.active Dashboard
+
+  section.content
+    .callout.callout-info
+      h4 Tip!
+      p
+        | Add the fixed class to the body tag to get this layout. The fixed layout is your best option if your sidebar
+        | is bigger than your content because it prevents extra unwanted scrolling.
+    .box
+      .box-header.with-border
+        h3.box-title Title
+        .box-tools.pull-right
+          button.btn.btn-box-tool(type='button', data-widget='collapse', data-toggle='tooltip', title='Collapse')
+            i.fa.fa-minus
+          button.btn.btn-box-tool(type='button', data-widget='remove', data-toggle='tooltip', title='Remove')
+            i.fa.fa-times
+      .box-body
+        | Start creating your amazing application!
+      .box-footer
+        | Footer
