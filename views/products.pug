@@ -3,64 +3,173 @@ extends layout-front
 block content-front
   section.section-padding(style="margin-top: 64px")
     .container
+      .row(style="text-align: center")
+        .col-md-12
+          h1.animated.wow.fadeInDown(data-wow-delay='.4s') Produk CARfix
+          
       .row
-        .col-md-6.col-lg-4.col-xl-4.pb-4.mix.business
-          figure.single-portfolio
-            img.img-fluid(src='assets/images/portfolio/work1.jpg' alt='')
-            figcaption.hover-content
-              a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                i.material-icons.mdi.mdi-arrow-right
-                .ripple-container
-              a(href='portfolio-single.html')
-                h2.subtitle Business Cards
-              p Asus Inc.
-        .col-md-6.col-lg-4.col-xl-4.mix.development.more
-          figure.single-portfolio
-            img.img-fluid(src='assets/images/portfolio/work2.jpg' alt='')
-            figcaption.hover-content
-              a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                i.material-icons.mdi.mdi-arrow-right
-                .ripple-container
-              a(href='portfolio-single.html')
-                h2.subtitle Brochure Design
-              p Tesla Motors
-        .col-md-6.col-lg-4.col-xl-4.mix.creative.business
-          figure.single-portfolio
-            img.img-fluid(src='assets/images/portfolio/work3.jpg' alt='')
-            figcaption.hover-content
-              a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                i.material-icons.mdi.mdi-arrow-right
-                .ripple-container
-              a(href='portfolio-single.html')
-                h2.subtitle Coffee Cup
-              p Starbucks USA
-        .col-md-6.col-lg-4.col-xl-4.mix.creative.more.development
-          figure.single-portfolio
-            img.img-fluid(src='assets/images/portfolio/work4.jpg' alt='')
-            figcaption.hover-content
-              a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                i.material-icons.mdi.mdi-arrow-right
-                .ripple-container
-              a(href='portfolio-single.html')
-                h2.subtitle Landing Page
-              p Uniliver, India
-        .col-md-6.col-lg-4.col-xl-4.mix.more.development
-          figure.single-portfolio
-            img.img-fluid(src='assets/images/portfolio/work5.jpg' alt='')
-            figcaption.hover-content
-              a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                i.material-icons.mdi.mdi-arrow-right
-                .ripple-container
-              a(href='portfolio-single.html')
-                h2.subtitle Dashboard Design
-              p Linode Inc.
-        .col-md-6.col-lg-4.col-xl-4.mix.creative.business
-          figure.single-portfolio
-            img.img-fluid(src='assets/images/portfolio/work6.jpg' alt='')
-            figcaption.hover-content
-              a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                i.material-icons.mdi.mdi-arrow-right
-                .ripple-container
-              a(href='portfolio-single.html')
-                h2.subtitle Re-Branding
-              p Alphabet Inc.
+        .col-md-12.Material-title-section.wow.animated.fadeInLeft(data-wow-delay='.2s')
+          h1.section-title Sparepart
+          h6 CARfix bermitra dengan beberapa produk keluaran produsen otomotif
+            | ternama seperti Michelin, Shell dan Incoe. Selain produk tersebut,
+            | CARfix juga menyediakan berbagai sparepart sesuai kendaraan dan kebutuhan Anda!
+        #Material-portfolio.portfolio-item-wrapper.clearfix.wow.animated.fadeInUp.col-md-12(data-wow-delay='.5s')
+          .row
+            .col-6.col-lg-4.col-xl-4.pb-4.mix.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product-1.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Michelin
+                  p Michelin.
+            .col-6.col-lg-4.col-xl-4.mix.development.more
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product-2.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Shell
+                  p Shell.
+            .col-6.col-lg-4.col-xl-4.mix.creative.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product-3.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Incoe
+                  p Incoe.
+      .row
+        .col-md-12.Material-title-section.wow.animated.fadeInLeft(data-wow-delay='.7s')
+          h1.section-title Jasa / Produk Servis
+          h6 Selain menyediakan sparepart diatas, CARfix juga melayani berbagai
+            | jasa service untuk all merk mobil, meliputi :
+        .portfolio-item-wrapper.clearfix.wow.animated.fadeInUp.col-md-12(data-wow-delay='.10s')
+          .row         
+            .col-6.col-lg-3.col-xl-3.pb-3.mix.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product11.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Oil
+                  p Oil.
+            .col-6.col-lg-3.col-xl-3.mix.development.more
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product12.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Battery
+                  p Battery.
+            .col-6.col-lg-3.col-xl-3.mix.creative.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product13.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Tyre
+                  p Tyre.
+            .col-6.col-lg-3.col-xl-3.mix.creative.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product14.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Shock Abs
+                  p Shock Abs.
+
+            .col-6.col-lg-3.col-xl-3.pb-3.mix.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product15.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Spooring
+                  p Spooring.
+            .col-6.col-lg-3.col-xl-3.mix.development.more
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product16.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Brake
+                  p Brake.
+            .col-6.col-lg-3.col-xl-3.mix.creative.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product17.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Engine
+                  p Engine.
+            .col-6.col-lg-3.col-xl-3.mix.creative.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product18.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Gear
+                  p Gear.
+            .col-6.col-lg-3.col-xl-3.pb-3.mix.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product19.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle AC
+                  p AC.
+            .col-6.col-lg-3.col-xl-3.mix.development.more
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product20.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle Electrical
+                  p Electrical.
+            .col-6.col-lg-3.col-xl-3.mix.creative.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product21.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle UV Ozone
+                  p UV Ozone.
+            .col-6.col-lg-3.col-xl-3.mix.creative.business
+              figure.single-portfolio
+                img.img-fluid(src='assets/images/product/product22.png' alt='')
+                figcaption.hover-content
+                  a.btn.btn-round.btn-fab.btn-xs(href='#')
+                    i.material-icons.mdi.mdi-arrow-right
+                    .ripple-container
+                  a(href='#')
+                    h2.subtitle All Service
+                  p All Service.
