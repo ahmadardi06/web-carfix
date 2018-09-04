@@ -1,0 +1,39 @@
+extend layout-backend
+
+block content-back
+  section.content-header
+    h1
+      | List All Sliders
+      small you can manage the sliders
+    ol.breadcrumb
+      li
+        a(href='http://localhost:3000/administrator/dashboard')
+          i.fa.fa-dashboard
+          |  Home
+      li
+        a(href='http://localhost:3000/sliders-backend/index') Sliders
+      li.active Data tables
+
+  .content
+    .row
+      .col-xs-12
+        .box
+          .box-body
+            table.dataTableDynamic.table.table-bordered.table-striped
+              thead
+                tr
+                  th ID
+                  th Title
+                  th Description
+                  th File
+                  th Create At
+                  th Display
+              tbody
+                each dd, i in dataSliders
+                  tr
+                    td= (i+1)
+                    td= dd.title
+                    td= dd.description
+                    td= dd.file
+                    td= dd.create_at
+                    td= dd.display
