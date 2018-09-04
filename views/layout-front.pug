@@ -17,6 +17,8 @@ html(lang='en')
     link(rel='stylesheet', href='http://localhost:3000/assets/css/responsive.css')
     link(rel='stylesheet', href='http://localhost:3000/assets/css/color-switcher.css')
     link(rel='stylesheet', type='text/css', href='http://localhost:3000/assets/css/colors/indigo.css', media='screen')
+    script(src="https://unpkg.com/vue")
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
   body
     header#header
       nav.navbar.navbar-expand-lg.fixed-top.scrolling-navbar.nav-bg(style='border-bottom: 4px solid #5166d8;')
@@ -39,11 +41,13 @@ html(lang='en')
                 a.nav-link(href='/products') 
                   i.mdi.mdi-star-circle
                   |  Products
-              li.nav-item.dropdown
+              li.nav-item.dropdown#appMenu
                 a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
                   i.mdi.mdi-sitemap
                   |  Networks
                 .dropdown-menu
+                  template(v-for='itemMenu in menuResults')
+                    a.dropdown-item(v-bind:href='itemMenu.description') {{ itemMenu.description }}
                   a.dropdown-item(href='http://carfix-tugu.business.site', target='_blank') Carfix Tugu
                   a.dropdown-item(href='http://carfix-majapahit.business.site', target='_blank') Carfix Majapahit
                   a.dropdown-item(href='http://carfix-wr-supratman.business.site', target='_blank') Carfix WR Supratman
@@ -237,3 +241,18 @@ html(lang='en')
     script(src='http://localhost:3000/assets/js/jquery.magnific-popup.min.js')
     script(src='http://localhost:3000/assets/js/jquery.slicknav.js')
     script(src='http://localhost:3000/assets/js/main.js')
+    script.
+      const url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+
+      const appMenu = new Vue({
+        el: '#appMenu',
+        data: {
+          menuResults: []
+        },
+        mounted() {
+          axios.get(url).then(res => {
+            console.log(res.data.bpi)
+            this.menuResults = res.data.bpi
+          })
+        }
+      });
