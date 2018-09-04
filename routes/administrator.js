@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 var mSliders = require('../models/sliders')
+var mNetworks = require('../models/networks')
 
 /* GET home page. */
 router.get('/login', function(req, res, next) {
@@ -35,5 +36,11 @@ router.get('/slider/one/:id', mSliders.getOneSlider);
 router.get('/sliders/create', mSliders.createSlider);
 router.get('/sliders/remove/:id', mSliders.removeOneSlider);
 router.get('/sliders/update/:id', mSliders.updateSlider);
+
+router.get('/networks/all', mNetworks.getAllNetworks);
+router.get('/network/one/:id', mNetworks.getOneNetwork);
+router.get('/networks/create', mNetworks.createNetwork);
+router.get('/networks/remove/:id', mNetworks.removeOneNetwork);
+router.get('/networks/update/:id', mNetworks.updateNetwork);
 
 module.exports = router;
