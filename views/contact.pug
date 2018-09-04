@@ -1,0 +1,95 @@
+extends layout-front
+
+block content-front
+  section.page-title-section.section-padding
+    .container
+      .row
+        .col-md-12
+          .title-center
+            .title-middle
+              h2.page-tagline Feel free to
+              h1.page-title Contact
+  
+  section.Material-contact-section.section-padding
+    .container
+      .row
+        .col-md-12
+          h1.contact-title.wow.animated.fadeInRight(data-wow-delay='.3s') We&rsquo;re always here to hear form you
+          p CARfix adalah Bengkel Mobil dengan Tools Modern, Mechanic professional, dan System Management Modern.
+            br
+            | Siap membantu semua jenis type mobil, dan melayani segala service mobil.
+      .row.justify-content-between.mt-3
+        .col-md-12.col-lg-7.col-xs-12.contact-widget-section
+          .row
+            .col-md-6.wow.fadeInUp.animated(data-wow-delay='.2s')
+              .single-contact-widget
+                i.material-icons.mdi.mdi-map-marker
+                h3 Kantor Pusat
+                address
+                  p Jln Puspowarno Tengah 7-11 Semarang.
+                  p Telepon : (024) 7603001, 7603002, 7603003
+                  p Handphone : 08157708070
+                  p Whatsapp : 08157708070
+            .col-md-6.wow.fadeInUp.animated(data-wow-delay='.3s')
+              .single-contact-widget
+                i.material-icons.mdi.mdi-phone
+                h3 Phone
+                address
+                  p 879-890-9767
+                  p 234-890-1213
+            .col-md-6.wow.fadeInUp.animated(data-wow-delay='.4s')
+              .single-contact-widget
+                i.material-icons.mdi.mdi-email-open
+                h3 Email
+                address
+                  p
+                    a.__cf_email__(href='../../cdn-cgi/l/email-protection.htm' data-cfemail='721f131b1e323f130617001b131e5c111d1f') [email&nbsp;protected]
+                  p
+                    a.__cf_email__(href='../../cdn-cgi/l/email-protection.htm' data-cfemail='f0838580809f8284b0bd9184958299919cde939f9d') [email&nbsp;protected]
+            .col-md-6.wow.fadeInUp.animated(data-wow-delay='.5s')
+              .single-contact-widget
+                i.material-icons.mdi.mdi-clock
+                h3 Opening Hours
+                address
+                  p Mon - Fri: 8 AM - 3 PM
+                  p Sat: 8 AM - 12 PM
+                  p Sun: Closed
+        .col-md-12.col-lg-5.col-xs-12.wow.fadeInUp.animated(data-wow-delay='.4s')
+          form#contactForm.shake(role='form' method='post' name='contact-form' data-toggle='validator')
+            .form-group.label-floating
+              label.control-label(for='name') Name
+              input#name.form-control(type='text' name='name' required='' data-error='Please enter your name')
+              .help-block.with-errors
+            .form-group.label-floating
+              label.control-label(for='email') Email
+              input#email.form-control(type='email' name='email' required='' data-error='Please enter your Email')
+              .help-block.with-errors
+            .form-group.label-floating
+              label.control-label(for='msgSubject') Subject
+              input#msg_subject.form-control(type='text' name='subject' required='' data-error='Please enter your message subject')
+              .help-block.with-errors
+            .form-group.label-floating
+              label.control-label(for='message') Message
+              textarea#message.form-control(rows='8' name='message' required='' data-error='Write your message')
+              .help-block.with-errors
+            .form-submit.mt-4
+              button#form-submit.btn.btn-common(type='submit')
+                i.material-icons.mdi.mdi-message-outline
+                |  Send Message
+              #msgSubmit.h3.text-center.hidden
+              .clearfix
+  section.call-to-action-section
+    .container
+      .row.justify-content-between
+        .col-md-8.col-lg-8.col-xs-12.text-left.wow.animated.fadeInLeft(data-wow-delay='.2s')
+          h1 Call Us @02-9114147
+          h3 Enjoy our 24/7 support
+        .col-md-4.col-lg-4.col-xs-12.mt-4.text-right.wow.animated.fadeInRight(data-wow-delay='.3s')
+          a.animated4.btn.btn-common(href='javascript:void(0)')
+            i.material-icons.mdi.mdi-phone
+            |  Contact us
+  section#google-map-area
+    .container-fluid
+      .row
+        .col-12
+          #conatiner-map
