@@ -1,0 +1,122 @@
+extends layout-front
+
+block content-front
+  section.Material-blog-post-page.section-padding(style="margin-top: 64px")
+    .container
+      .row
+        .single-blog-page.col-md-12.col-lg-8.col-xs-12
+          article.single-post.wow.fadeInUp.animated(data-wow-delay='.2s')
+            .post-image
+              img.img-fluid(src='assets/images/blog/post-image.jpg' alt='')
+            h2 The best, free Stock Photography and Video resources
+            p
+              b Lorem ipsum
+              |  dolor sit amet, consectetur adipisicing elit. Harum minima, earum optio quia recusandae ipsam, obcaecati! Sunt ullam nisi, ratione quisquam provident eius quae facilis eos, deserunt consequatur, officiis quos.
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta reiciendis illum possimus et ducimus quia sed dolorum id cumque rerum, fuga voluptatem, fugiat quidem mollitia eos vel, nisi voluptatum corrupti eaque voluptas! Praesentium hic pariatur est voluptatibus suscipit vel tempora necessitatibus animi ratione tempore natus modi, odit, explicabo nulla laudantium veritatis dignissimos? Odit sequi, ipsam quod eligendi tempore obcaecati reprehenderit, dicta repudiandae officiis voluptatibus odio cupiditate, tempora repellat ut. Possimus odit veritatis fugiat dolorem accusamus, facilis excepturi.
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus magni ad sapiente optio illo iste quidem quod voluptatibus, eligendi aliquid?
+            blockquote
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis harum laborum praesentium obcaecati nam explicabo?
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam quas quibusdam magnam asperiores laudantium rerum a, illo illum dolore amet. Adipisci vel, vero a minus nemo voluptatem. Vel ipsa totam veniam corporis quia, ipsum asperiores rem, eveniet, hic aut fuga.
+            .single-post-meta
+              .post-tag
+                a(href='#')
+                  i.material-icons.mdi.mdi-bookmark-outline
+                  |  Photography, Image
+              .share-post
+                a(href='#')
+                  i.fa.fa-facebook
+                a(href='#')
+                  i.fa.fa-twitter
+                a(href='#')
+                  i.fa.fa-google-plus
+                a(href='#')
+                  i.fa.fa-pinterest
+          .users-comment-section.mt-2.wow.animated.fadeInUp(data-wow-delay='.3s')
+            ul
+              li.media
+                .media-left
+                  img(src='assets/images/blog/comment1.jpg' alt='')
+                .media-body
+                  a(href='#')
+                    h3 Jhon Doe
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe deleniti accusantium earum vitae aperiam eos dolorum quidem, architecto tenetur molestiae!
+                  a.replay(href='#') Reply
+                  .media
+                    .media-left
+                      img(src='assets/images/blog/comment2.jpg' alt='')
+                    .media-body
+                      a(href='#')
+                        h3 Cristiana
+                      p
+                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe deleniti accusantium earum vitae aperiam eos dolorum quidem, architecto tenetur molestiae!
+                      a.replay(href='#') Reply
+              li.media
+                .media-left
+                  img(src='assets/images/blog/comment3.jpg' alt='')
+                .media-body
+                  a(href='#')
+                    h3 Javed
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe deleniti accusantium earum vitae aperiam eos dolorum quidem, architecto tenetur molestiae!
+                  a.replay(href='#') Reply
+              li.media
+                .media-left
+                  img(src='assets/images/blog/comment4.jpg' alt='')
+                .media-body
+                  a(href='#')
+                    h3 Larry Page
+                  p
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe deleniti accusantium earum vitae aperiam eos dolorum quidem, architecto tenetur molestiae!
+                  a.replay(href='#') Reply
+          .comment-box.row.x.mt-5.clearfix.wow.fadeInUp.animated(data-wow-delay='.4s')
+            .col-md-4
+              .form-group.label-floating
+                label.sr-only(for='name') Email
+                input#name.form-control(type='text' placeholder='Your Name' required='')
+            .col-md-4
+              .form-group.label-floating
+                label.sr-only(for='useremail') Email
+                input#useremail.form-control(type='email' placeholder='Email Address' required='')
+            .col-md-4
+              .form-group.label-floating
+                label.sr-only(for='userurl') Website
+                input#userurl.form-control(type='text' placeholder='Your Website' required='')
+            .form-group.label-floating.col-md-12
+              label.sr-only(for='usermessage') Message
+              textarea#usermessage.form-control(placeholder='Type here message' rows='7' required='')
+            a.mt-3.btn.btn-common(href='javascript:void(0)')
+              i.mdi.mdi-message-text
+              |  Post Comment
+              .ripple-container
+        .col-md-12.col-lg-4.col-xs-12.blog-sidebar-column
+          aside.col-md-12.single-sidebar-widget.author-widget.no-padding.wow.animated.fadeInUp(data-wow-delay='.2s')
+            .author-bg
+              img(src='assets/images/blog/author-bg.jpg' alt='')
+            .author-info
+              .author-name
+                .author-intro
+                  h3 Jhon Doe
+                  p Front End Developer
+                .author-image
+                  img.img-circle(src='assets/images/blog/author.jpg' alt='')
+              .author-bio
+                p
+                  | While you are planning for a trip then you always search for a best place to visit because that time you have looked for many of places in your mind. Same time, when the thought of Shimla comes in your mind, you stop the thoughts about other places because the gorgeousness of natural beauty of Shimla.
+          aside.col-md-12.single-sidebar-widget.flickr-widget.no-padding.wow.animated.fadeInUp(data-wow-delay='.4s')
+            .sidebar-widget-title
+              h2 Categories
+            ul.categories-list
+              li
+                a(href='#') Automotive (21)
+              li
+                a(href='#') Technology (19)
+              li
+                a(href='#') Sparepart (16)
+              li
+                a(href='#') Works (7)
+
