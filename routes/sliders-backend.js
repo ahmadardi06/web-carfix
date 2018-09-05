@@ -4,6 +4,19 @@ var router = express.Router();
 var Db = require('../configs/database');
 var tSliders = Db.extend({tableName: "sliders"});
 
+var multer = require('multer');
+var storage = multer.diskStorage({
+	destination: (req, file, cb) => {
+		cb(null, 'public/assets/images/slider')
+	},
+	filename: (req, file, cb) => {
+		var pecah = file.originalname.split('.');
+		var ekstension = pecah[pecah.length-1];
+		cb(null, 'slider-'+Date.now()+'.'+ekstension)
+	}
+})
+var upload = multer({storage: storage});
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var mSliders = new tSliders();
@@ -44,12 +57,12 @@ router.get('/form/:id', (req, res, next)=>{
 	})
 })
 
-router.post('/add', (req, res, next)=>{
+router.post('/add', upload.single('file'), (req, res, next)=>{
 	var formData = {
 		id_slider: req.body.id_slider,
 		title: req.body.title,
 		description: req.body.description,
-		file: req.body.file,
+		file: req.file.filename,
 	};
 
 	var mSliders = new tSliders(formData);
