@@ -46,7 +46,6 @@ router.get('/form/:id', (req, res, next)=>{
 
 router.post('/add', (req, res, next)=>{
 	var formData = {
-		id: req.body.id,
 		title: req.body.title,
 		description: req.body.description,
 		file: req.body.file,

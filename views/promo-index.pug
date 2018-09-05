@@ -28,19 +28,29 @@ block content-back
                 tr
                   th ID
                   th Title
-                  th link
+                  th Description
+                  th File
+                  //- th Create At
+                  th Display
                   th action
               tbody
-                each dd, i in dataNetworks
+                each dd, i in dataPromo
+                  if dd.display === 'n'
+                    -var disp = "<a href='http://localhost:3000/promo-backend/display/"+dd.id+"/"+dd.display+"' class='btn btn-sm btn-danger'>No</a>"
+                  else
+                    -var disp = "<a href='http://localhost:3000/promo-backend/display/"+dd.id+"/"+dd.display+"' class='btn btn-sm btn-success'>Yes</a>"
                   tr
                     td= (i+1)
                     td= dd.title
-                    td= dd.link
+                    td= dd.description
+                    td= dd.file
+                    //- td= dd.create_at
+                    td !{disp}
                     td
-                      a.btn.btn-sm.btn-warning(href='http://localhost:3000/networks-backend/form/'+dd.id)
+                      a.btn.btn-sm.btn-warning(href='http://localhost:3000/promo-backend/form/'+dd.id)
                         i.fa.fa-edit
                         | &nbsp; update
                       | &nbsp;
-                      a.btn.btn-sm.btn-danger(href='http://localhost:3000/networks-backend/remove/'+dd.id)
+                      a.btn.btn-sm.btn-danger(href='http://localhost:3000/promo-backend/remove/'+dd.id)
                         i.fa.fa-edit
                         | &nbsp; delete

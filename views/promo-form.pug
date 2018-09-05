@@ -1,0 +1,38 @@
+extend layout-backend
+
+block content-back
+  section.content-header
+    h1
+      | Form Create Promo
+      small you can manage the promo
+    ol.breadcrumb
+      li
+        a(href='http://localhost:3000/administrator/dashboard')
+          i.fa.fa-dashboard
+          |  Home
+      li
+        a(href='http://localhost:3000/promo-backend/index') Promo
+      li.active Data tables
+
+  .content
+    .row
+      .col-xs-12
+        .box
+          .box-header
+            a.btn.btn-primary(href='http://localhost:3000/promo-backend/index') 
+              i.fa.fa-toggle-left
+              | &nbsp; Back
+            form(method='post', action=formData.action, role='form')
+                .box-body
+                    .form-group
+                        label Title
+                        input(type='hidden', name='id', value=formData.id)
+                        input.form-control(type='text', name='title', placeholder='enter title', required, value=formData.title)
+                    .form-group
+                        label Description
+                        input.form-control(type='text', name='description', placeholder='enter description', required, value=formData.description)
+                    .form-group
+                        label File
+                        input.form-control(type='text', name='file', placeholder='enter file', required, value=formData.file)
+                    .form-group
+                        input.btn.btn-success(type='submit', name='submit', value='Save Slider')
