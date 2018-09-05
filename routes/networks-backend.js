@@ -78,4 +78,12 @@ router.get('/remove/:id', (req, res, next)=>{
 	})
 })
 
+router.get('/api/all', (req, res, next)=>{
+	var mNetworks = new TNetworks();
+	mNetworks.find((err, rows, fields)=>{
+		if(err) throw new Error(err)
+		res.json(rows)
+	})
+})
+
 module.exports = router;

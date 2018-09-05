@@ -47,13 +47,7 @@ html(lang='en')
                   |  Networks
                 .dropdown-menu
                   template(v-for='itemMenu in menuResults')
-                    a.dropdown-item(v-bind:href='itemMenu.description') {{ itemMenu.description }}
-                  a.dropdown-item(href='http://carfix-tugu.business.site', target='_blank') Carfix Tugu
-                  a.dropdown-item(href='http://carfix-majapahit.business.site', target='_blank') Carfix Majapahit
-                  a.dropdown-item(href='http://carfix-wr-supratman.business.site', target='_blank') Carfix WR Supratman
-                  a.dropdown-item(href='http://carfix-mrican.business.site', target='_blank') Carfix Mrican
-                  a.dropdown-item(href='http://carfix-solo.business.site', target='_blank') Carfix Yos Sudarso
-                  a.dropdown-item(href='http://carfix-bantul.business.site', target='_blank') Carfix Bantul
+                    a.dropdown-item(v-bind:href='itemMenu.link', target='_blank') {{ itemMenu.title }}
               li.nav-item
                 a.nav-link(href='/promo') 
                   i.mdi.mdi-tag-heart
@@ -241,18 +235,4 @@ html(lang='en')
     script(src='http://localhost:3000/assets/js/jquery.magnific-popup.min.js')
     script(src='http://localhost:3000/assets/js/jquery.slicknav.js')
     script(src='http://localhost:3000/assets/js/main.js')
-    script.
-      const url = "https://api.coindesk.com/v1/bpi/currentprice.json";
-
-      const appMenu = new Vue({
-        el: '#appMenu',
-        data: {
-          menuResults: []
-        },
-        mounted() {
-          axios.get(url).then(res => {
-            console.log(res.data.bpi)
-            this.menuResults = res.data.bpi
-          })
-        }
-      });
+    script(src='http://localhost:3000/assets/js/web-carfix.js')
