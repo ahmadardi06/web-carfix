@@ -1,0 +1,43 @@
+extend layout-backend
+
+block content-back
+  section.content-header
+    h1
+      | Form Create Event and News Article
+      small you can manage the Event and News Article
+    ol.breadcrumb
+      li
+        a(href='http://localhost:3000/administrator/dashboard')
+          i.fa.fa-dashboard
+          |  Home
+      li
+        a(href='http://localhost:3000/articles-backend/index') Articles
+      li.active Data tables
+
+  .content
+    .row
+      .col-xs-12
+        .box
+          .box-header
+            a.btn.btn-primary(href='http://localhost:3000/articles-backend/index') 
+              i.fa.fa-toggle-left
+              | &nbsp; Back
+            form(method='post', action=formData.action, role='form')
+                .box-body
+                    .form-group
+                        label Title
+                        input(type='hidden', name='id', value=formData.id)
+                        input(type='hidden', name='account_id', value=formData.account_id)
+                        input(type='hidden', name='article_type', value=formData.article_type)
+                        input.form-control(type='text', name='title', placeholder='enter title', required, value=formData.title)
+                    .form-group
+                        label Body
+                        textarea.form-control(type='text', name='body', placeholder='enter body', required, cols="30", rows="10")=formData.body
+                    .form-group
+                        label File
+                        input.form-control(type='text', name='file', placeholder='enter file', required, value=formData.file)
+                    .form-group
+                        label Tag
+                        input.form-control(type='text', name='tag', placeholder='enter tag', required, value=formData.tag)
+                    .form-group
+                        input.btn.btn-success(type='submit', name='submit', value='Save Article')
