@@ -1,4 +1,5 @@
 const url = "http://localhost:3000/networks-backend/api/all";
+
 const appMenu = new Vue({
   el: '#appMenu',
   data: {
@@ -10,3 +11,5 @@ const appMenu = new Vue({
     })
   }
 });
+
+

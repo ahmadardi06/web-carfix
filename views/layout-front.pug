@@ -21,7 +21,7 @@ html(lang='en')
     script(src="https://unpkg.com/axios/dist/axios.min.js")
   body
     header#header
-      nav.navbar.navbar-expand-lg.fixed-top.scrolling-navbar.nav-bg(style='border-bottom: 4px solid #5166d8;')
+      nav#appMenu.navbar.navbar-expand-lg.fixed-top.scrolling-navbar.nav-bg(style='border-bottom: 4px solid #5166d8;')
         .container
           .navbar-header
             button.navbar-toggler(type='button', data-toggle='collapse', data-target='#main-navbar', aria-controls='main-navbar', aria-expanded='false', aria-label='Toggle navigation')
@@ -41,7 +41,7 @@ html(lang='en')
                 a.nav-link(href='/products') 
                   i.mdi.mdi-star-circle
                   |  Products
-              li.nav-item.dropdown#appMenu
+              li.nav-item.dropdown
                 a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
                   i.mdi.mdi-sitemap
                   |  Networks
@@ -82,18 +82,8 @@ html(lang='en')
           li
             a(href='#') Networks
             ul.dropdown
-              li
-                a(href='http://carfix-tugu.business.site') Carfix Tugu
-              li
-                a(href='http://carfix-majapahit.business.site') Carfix Majapahit
-              li
-                a(href='http://carfix-ws-supratman.business.site') Carfix WR Supratman
-              li
-                a(href='http://carfix-mrican.business.site') Carfix Mrican
-              li
-                a(href='http://carfix-solo.business.site') Carfix Yos Sudarso
-              li
-                a(href='http://carfix-bantul.business.site') Carfix Bantul
+              li(v-for='itemMenu in menuResults')
+                a(v-bind:href='itemMenu.link', target='_blank') {{ itemMenu.title }}
           li
             a(href='/promo') Promo
           li

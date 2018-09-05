@@ -4,6 +4,19 @@ var router = express.Router();
 var Db = require('../configs/database');
 var TArticles = Db.extend({tableName: "articles"});
 
+var multer = require('multer');
+var storage = multer.diskStorage({
+	destination: (req, file, cb) => {
+		cb(null, 'public/assets/images/article')
+	},
+	filename: (req, file, cb) => {
+		var pecah = file.originalname.split('.');
+		var ekstension = pecah[pecah.length-1];
+		cb(null, 'article-'+Date.now()+'.'+ekstension)
+	}
+})
+var upload = multer({storage: storage});
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var mArticles = new TArticles();
@@ -81,11 +94,11 @@ router.get('/eventnnews-form/:id', (req, res, next)=>{
 	})
 })
 
-router.post('/add', (req, res, next)=>{
+router.post('/add', upload.single('file'), (req, res, next)=>{
 	var formData = {
 		title: req.body.title,
 		body: req.body.body,
-		file: req.body.file,
+		file: req.file.filename,
 		tag: req.body.tag,
 		article_type: req.body.article_type,
 		account_id: req.body.account_id,
@@ -98,12 +111,12 @@ router.post('/add', (req, res, next)=>{
 	});
 })
 
-router.post('/update', (req, res, next)=>{
+router.post('/update', upload.single('file'), (req, res, next)=>{
 	var formData = {
 		id: req.body.id,
 		title: req.body.title,
 		body: req.body.body,
-		file: req.body.file,
+		file: req.file.filename,
 		tag: req.body.tag,
 		article_type: req.body.article_type,
 		account_id: req.body.account_id,

@@ -3,25 +3,26 @@ extends layout-front
 block content-front
   #main-slide.carousel.slide(data-ride='carousel')
     ol.carousel-indicators
-      li.active(data-target='#main-slide', data-slide-to='0')
-      li(data-target='#main-slide', data-slide-to='1')
-      li(data-target='#main-slide', data-slide-to='2')
+      template(v-for="item, iter in sliderResults")
+        template(v-if='iter == 0')
+          li.active(data-target='#main-slide', v-bind:data-slide-to= 'iter')
+        template(v-else)
+          li(data-target='#main-slide', v-bind:data-slide-to= 'iter')
     .carousel-inner
-      .carousel-item.active
-        img.d-block.w-100(src='assets/images/slider/slider-bg1.jpg', alt='First slide')
-        .carousel-caption.d-md-block
-          h1.animated.wow.fadeInDown.hero-heading(data-wow-delay='.4s') Crafted with Bootstrap 4
-          h5.animated.fadeInUp.wow.hero-sub-heading(data-wow-delay='.6s') Material Design Meets With The Power of Bootstrap 4
-      .carousel-item
-        img.d-block.w-100(src='assets/images/slider/slider-bg2.jpg', alt='Second slide')
-        .carousel-caption.d-md-block
-          h1.animated.wow.fadeInDown.hero-heading(data-wow-delay='.4s') Crafted with Bootstrap 4
-          h5.animated.fadeInUp.wow.hero-sub-heading(data-wow-delay='.6s') Material Design Meets With The Power of Bootstrap 4
-      .carousel-item
-        img.d-block.w-100(src='assets/images/slider/slider-bg3.jpg', alt='Third slide')
-        .carousel-caption.d-md-block
-          h1.animated.wow.fadeInDown.hero-heading(data-wow-delay='.4s') Crafted with Bootstrap 4
-          h5.animated.fadeInUp.wow.hero-sub-heading(data-wow-delay='.6s') Material Design Meets With The Power of Bootstrap 4
+      template(v-for="item, iter in sliderResults")
+        template(v-if='iter == 0')
+          .carousel-item.active
+            img.d-block.w-100(v-bind:src="'assets/images/slider/'+item.file", alt='First slide')
+            .carousel-caption.d-md-block
+              h1.animated.wow.fadeInDown.hero-heading(data-wow-delay='.4s') {{ item.title }}
+              h5.animated.fadeInUp.wow.hero-sub-heading(data-wow-delay='.6s') {{ item.description }}
+        template(v-else)
+          .carousel-item
+            img.d-block.w-100(v-bind:src="'assets/images/slider/'+item.file", alt='First slide')
+            .carousel-caption.d-md-block
+              h1.animated.wow.fadeInDown.hero-heading(data-wow-delay='.4s') {{ item.title }}
+              h5.animated.fadeInUp.wow.hero-sub-heading(data-wow-delay='.6s') {{ item.description }}
+
     a.carousel-control-prev(href='#main-slide', role='button', data-slide='prev')
       span.carousel-control(aria-hidden='true')
         i.mdi.mdi-arrow-left(data-ripple-color='#F0F0F0')
@@ -544,3 +545,4 @@ block content-front
                 |  Send Message
               #msgSubmit.h3.text-center.hidden
               .clearfix
+  script(src="http://localhost:3000/assets/js/index-vue.js")

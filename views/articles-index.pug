@@ -52,7 +52,7 @@ block content-back
                   tr
                     td= (i+1)
                     td= dd.title
-                    td= dd.body
+                    td= dd.body.substring(0, 128)
                     td= dd.file
                     //- td= dd.create_at
                     td= dd.tag
@@ -61,7 +61,7 @@ block content-back
                       a.btn.btn-sm.btn-warning(href=updateUrl )
                         i.fa.fa-edit
                         | &nbsp; update
-                      | &nbsp;
+                      br
                       a.btn.btn-sm.btn-danger(href='http://localhost:3000/articles-backend/remove/'+dd.id)
                         i.fa.fa-edit
                         | &nbsp; delete

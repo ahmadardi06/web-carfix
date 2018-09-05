@@ -22,7 +22,7 @@ block content-back
             a.btn.btn-primary(href='http://localhost:3000/articles-backend/index') 
               i.fa.fa-toggle-left
               | &nbsp; Back
-            form(method='post', action=formData.action, role='form')
+            form(method='post', action=formData.action, role='form', enctype='multipart/form-data')
                 .box-body
                     .form-group
                         label Title
@@ -31,13 +31,13 @@ block content-back
                         input(type='hidden', name='article_type', value=formData.article_type)
                         input.form-control(type='text', name='title', placeholder='enter title', required, value=formData.title)
                     .form-group
-                        label Body
-                        textarea.form-control(type='text', name='body', placeholder='enter body', required, cols="30", rows="10")=formData.body
-                    .form-group
                         label File
-                        input.form-control(type='text', name='file', placeholder='enter file', required, value=formData.file)
+                        input.form-control(type='file', name='file', placeholder='enter file', required, value=formData.file)
                     .form-group
                         label Tag
                         input.form-control(type='text', name='tag', placeholder='enter tag', required, value=formData.tag)
+                    .form-group
+                        label Body
+                        textarea.form-control(type='text', name='body', placeholder='enter body', required, cols="30", rows="10")=formData.body
                     .form-group
                         input.btn.btn-success(type='submit', name='submit', value='Save Article')

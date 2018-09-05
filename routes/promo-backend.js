@@ -4,6 +4,19 @@ var router = express.Router();
 var Db = require('../configs/database');
 var TPromo = Db.extend({tableName: "promo"});
 
+var multer = require('multer');
+var storage = multer.diskStorage({
+	destination: (req, file, cb) => {
+		cb(null, 'public/assets/images/promo')
+	},
+	filename: (req, file, cb) => {
+		var pecah = file.originalname.split('.');
+		var ekstension = pecah[pecah.length-1];
+		cb(null, 'promo-'+Date.now()+'.'+ekstension)
+	}
+})
+var upload = multer({storage: storage});
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
   var mPromo = new TPromo();
@@ -44,11 +57,11 @@ router.get('/form/:id', (req, res, next)=>{
 	})
 })
 
-router.post('/add', (req, res, next)=>{
+router.post('/add', upload.single('file'), (req, res, next)=>{
 	var formData = {
 		title: req.body.title,
 		description: req.body.description,
-		file: req.body.file,
+		file: req.file.filename,
 	};
 
 	var mPromo = new TPromo(formData);
@@ -58,12 +71,12 @@ router.post('/add', (req, res, next)=>{
 	});
 })
 
-router.post('/update', (req, res, next)=>{
+router.post('/update', upload.single('file'), (req, res, next)=>{
 	var formData = {
 		id: req.body.id,
 		title: req.body.title,
 		description: req.body.description,
-		file: req.body.file,
+		file: req.file.filename,
 	};
 
 	var mPromo = new TPromo();

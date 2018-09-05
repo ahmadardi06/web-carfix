@@ -72,12 +72,12 @@ router.post('/add', upload.single('file'), (req, res, next)=>{
 	});
 })
 
-router.post('/update', (req, res, next)=>{
+router.post('/update', upload.single('file'), (req, res, next)=>{
 	var formData = {
 		id_slider: req.body.id_slider,
 		title: req.body.title,
 		description: req.body.description,
-		file: req.body.file,
+		file: req.file.filename,
 	};
 
 	var mSliders = new tSliders();
@@ -111,6 +111,14 @@ router.get('/display/:id/:display', (req, res, next)=>{
 		if(err) throw new Error(err);
 		res.redirect('/sliders-backend/index')
 	});
+})
+
+router.get('/api/all', (req, res, next)=>{
+	var mSliders = new tSliders();
+	mSliders.find("all", {where: "display = 'y'"}, (err, rows, fields)=>{
+		if(err) throw new Error(err)
+		res.json(rows)
+	})
 })
 
 module.exports = router;

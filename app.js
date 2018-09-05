@@ -18,15 +18,15 @@ var eventnnewsRouter = require('./routes/eventnnews');
 var articleRouter = require('./routes/article');
 
 //Router for Backend
-var slidersRouter = require('./routes/sliders-backend');
-var networksRouter = require('./routes/networks-backend');
-var promoRouter = require('./routes/promo-backend');
+var slidersBackendRouter = require('./routes/sliders-backend');
+var networksBackendRouter = require('./routes/networks-backend');
+var promoBackendRouter = require('./routes/promo-backend');
 // var tipsntrickRouter = require('./routes/tipsntrick-backend');
 // var eventnnewsRouter = require('./routes/eventnnews-backend');
-var articlesRouter = require('./routes/articles-backend');
-var productsRouter = require('./routes/products-backend');
-var contactusRouter = require('./routes/contactus-backend');
-var usersRouter = require('./routes/users-backend');
+var articlesBackendRouter = require('./routes/articles-backend');
+var productsBackendRouter = require('./routes/products-backend');
+var contactusBackendRouter = require('./routes/contactus-backend');
+var usersBackendRouter = require('./routes/users-backend');
 
 var app = express();
 
@@ -54,15 +54,15 @@ app.use('/eventnnews', eventnnewsRouter);
 app.use('/article', articleRouter);
 
 //Route for backend
-app.use('/sliders-backend', slidersRouter);
-app.use('/networks-backend', networksRouter);
-app.use('/promo-backend', promoRouter);
-app.use('/articles-backend', articlesRouter);
+app.use('/sliders-backend', slidersBackendRouter);
+app.use('/networks-backend', networksBackendRouter);
+app.use('/promo-backend', promoBackendRouter);
+app.use('/articles-backend', articlesBackendRouter);
 // app.use('/tipsntrick-backend', tipsntrickRouter);
 // app.use('/eventnnews-backend', eventnnewsRouter);
-app.use('/products-backend', productsRouter);
-app.use('/contactus-backend', contactusRouter);
-app.use('/users-backend', usersRouter);
+app.use('/products-backend', productsBackendRouter);
+app.use('/contactus-backend', contactusBackendRouter);
+app.use('/users-backend', usersBackendRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
