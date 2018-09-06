@@ -36,9 +36,9 @@ block content-back
               tbody
                 each dd, i in dataPromo
                   if dd.display === 'n'
-                    -var disp = "<a href=env.URL_HOST+'promo-backend/display/"+dd.id+"/"+dd.display+"' class='btn btn-sm btn-danger'>No</a>"
+                    -var disp = "<a href='"+env.URL_HOST+"promo-backend/display/"+dd.id+"/"+dd.display+"' class='btn btn-sm btn-danger'>No</a>"
                   else
-                    -var disp = "<a href=env.URL_HOST+'promo-backend/display/"+dd.id+"/"+dd.display+"' class='btn btn-sm btn-success'>Yes</a>"
+                    -var disp = "<a href='"+env.URL_HOST+"promo-backend/display/"+dd.id+"/"+dd.display+"' class='btn btn-sm btn-success'>Yes</a>"
                   tr
                     td= (i+1)
                     td= dd.title
