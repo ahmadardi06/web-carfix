@@ -1,4 +1,6 @@
-const sliderUrl = env.URL_HOST+"sliders-backend/api/all";
+const hosts = 'http://149.129.240.111/';
+const sliderUrl = hosts+"sliders-backend/api/all";
+// const sliderUrl = env.URL_HOST+"sliders-backend/api/all";
 
 const appSlider = new Vue({
   el: '#main-slide',
