@@ -1,4 +1,4 @@
-const url = "http://localhost:3000/networks-backend/api/all";
+const url = env.URL_HOST+"networks-backend/api/all";
 
 const appMenu = new Vue({
   el: '#appMenu',
