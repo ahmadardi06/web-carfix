@@ -110,7 +110,7 @@ router.get('/display/:id/:display', (req, res, next)=>{
 })
 
 router.get('/api/all', (req, res, next)=>{
-	var mPromo = new tPromo();
+	var mPromo = new TPromo();
 	mPromo.find("all", {where: "display = 'y'"}, (err, rows, fields)=>{
 		if(err) throw new Error(err)
 		res.json(rows)
