@@ -7,11 +7,11 @@ block content-back
       small you can manage the sliders
     ol.breadcrumb
       li
-        a(href='http://localhost:3000/administrator/dashboard')
+        a(href=env.URL_HOST+'administrator/dashboard')
           i.fa.fa-dashboard
           |  Home
       li
-        a(href='http://localhost:3000/sliders-backend/index') Sliders
+        a(href=env.URL_HOST+'sliders-backend/index') Sliders
       li.active Data tables
 
   .content
@@ -19,7 +19,7 @@ block content-back
       .col-xs-12
         .box
           .box-header
-            a.btn.btn-primary(href='http://localhost:3000/sliders-backend/index') 
+            a.btn.btn-primary(href=env.URL_HOST+'sliders-backend/index') 
               i.fa.fa-toggle-left
               | &nbsp; Back
             form(method='post', action=formData.action, role='form', enctype='multipart/form-data')

@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express');
 var router = express.Router();
 
@@ -24,7 +25,7 @@ router.get('/form', (req, res, next)=>{
 		id: '',
 		title: '',
 		link: '',
-		action: 'http://localhost:3000/networks-backend/add',
+		action: process.env.URL_HOST+'networks-backend/add',
 	};
 	res.render('networks-form', {formData: formData})
 })
@@ -36,7 +37,7 @@ router.get('/form/:id', (req, res, next)=>{
 			id: rows[0].id,
 			title: rows[0].title,
 			link: rows[0].link,
-			action: 'http://localhost:3000/networks-backend/update',
+			action: process.env.URL_HOST+'networks-backend/update',
 		};
 		res.render('networks-form', {formData: formData})
 	})

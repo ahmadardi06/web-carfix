@@ -7,11 +7,11 @@ block content-back
       small you can manage the articles
     ol.breadcrumb
       li
-        a(href='http://localhost:3000/administrator/dashboard')
+        a(href=env.URL_HOST+'administrator/dashboard')
           i.fa.fa-dashboard
           |  Home
       li
-        a(href='http://localhost:3000/articles-backend/index') Articles
+        a(href=env.URL_HOST+'articles-backend/index') Articles
       li.active Data tables
 
   .content
@@ -19,11 +19,11 @@ block content-back
       .col-xs-12
         .box
           .box-header
-            a.btn.btn-primary(href='http://localhost:3000/articles-backend/tipsntrick-form') 
+            a.btn.btn-primary(href=env.URL_HOST+'articles-backend/tipsntrick-form') 
               i.fa.fa-plus
               | &nbsp; Add Tips & Trick
             | &nbsp;
-            a.btn.btn-primary(href='http://localhost:3000/articles-backend/eventnnews-form') 
+            a.btn.btn-primary(href=env.URL_HOST+'articles-backend/eventnnews-form') 
               i.fa.fa-plus
               | &nbsp; Add Event & News
           .box-body
@@ -42,13 +42,13 @@ block content-back
                 each dd, i in dataArticles
                   if dd.article_type === 'tt'
                     -var disp = "Tips & Trick"
-                    -var updateUrl = 'http://localhost:3000/articles-backend/tipsntrick-form/'+dd.id
+                    -var updateUrl = env.URL_HOST+'articles-backend/tipsntrick-form/'+dd.id
                   else if dd.article_type === 'en'
                     -var disp = "Event & Articles"
-                    -var updateUrl = 'http://localhost:3000/articles-backend/eventnnews-form/'+dd.id
+                    -var updateUrl = env.URL_HOST+'articles-backend/eventnnews-form/'+dd.id
                   else
                     -var disp = "default"
-                    -var updateUrl = 'http://localhost:3000/articles-backend/defarticle-form/'+dd.id
+                    -var updateUrl = env.URL_HOST+'articles-backend/defarticle-form/'+dd.id
                   tr
                     td= (i+1)
                     td= dd.title
@@ -62,6 +62,6 @@ block content-back
                         i.fa.fa-edit
                         | &nbsp; update
                       br
-                      a.btn.btn-sm.btn-danger(href='http://localhost:3000/articles-backend/remove/'+dd.id)
+                      a.btn.btn-sm.btn-danger(href=env.URL_HOST+'articles-backend/remove/'+dd.id)
                         i.fa.fa-edit
                         | &nbsp; delete

@@ -7,11 +7,11 @@ block content-back
       small you can manage the networks
     ol.breadcrumb
       li
-        a(href='http://localhost:3000/administrator/dashboard')
+        a(href=env.URL_HOST+'administrator/dashboard')
           i.fa.fa-dashboard
           |  Home
       li
-        a(href='http://localhost:3000/networks-backend/index') Networks
+        a(href=env.URL_HOST+'networks-backend/index') Networks
       li.active Data tables
 
   .content
@@ -19,7 +19,7 @@ block content-back
       .col-xs-12
         .box
           .box-header
-            a.btn.btn-primary(href='http://localhost:3000/networks-backend/form') 
+            a.btn.btn-primary(href=env.URL_HOST+'networks-backend/form') 
               i.fa.fa-plus
               | &nbsp; Add Network
           .box-body
@@ -37,10 +37,10 @@ block content-back
                     td= dd.title
                     td= dd.link
                     td
-                      a.btn.btn-sm.btn-warning(href='http://localhost:3000/networks-backend/form/'+dd.id)
+                      a.btn.btn-sm.btn-warning(href=env.URL_HOST+'networks-backend/form/'+dd.id)
                         i.fa.fa-edit
                         | &nbsp; update
                       | &nbsp;
-                      a.btn.btn-sm.btn-danger(href='http://localhost:3000/networks-backend/remove/'+dd.id)
+                      a.btn.btn-sm.btn-danger(href=env.URL_HOST+'networks-backend/remove/'+dd.id)
                         i.fa.fa-edit
                         | &nbsp; delete

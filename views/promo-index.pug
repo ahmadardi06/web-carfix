@@ -7,11 +7,11 @@ block content-back
       small you can manage the promo
     ol.breadcrumb
       li
-        a(href='http://localhost:3000/administrator/dashboard')
+        a(href=env.URL_HOST+'administrator/dashboard')
           i.fa.fa-dashboard
           |  Home
       li
-        a(href='http://localhost:3000/promo-backend/index') Promo
+        a(href=env.URL_HOST+'promo-backend/index') Promo
       li.active Data tables
 
   .content
@@ -19,7 +19,7 @@ block content-back
       .col-xs-12
         .box
           .box-header
-            a.btn.btn-primary(href='http://localhost:3000/promo-backend/form') 
+            a.btn.btn-primary(href=env.URL_HOST+'promo-backend/form') 
               i.fa.fa-plus
               | &nbsp; Add Promo
           .box-body
@@ -36,9 +36,9 @@ block content-back
               tbody
                 each dd, i in dataPromo
                   if dd.display === 'n'
-                    -var disp = "<a href='http://localhost:3000/promo-backend/display/"+dd.id+"/"+dd.display+"' class='btn btn-sm btn-danger'>No</a>"
+                    -var disp = "<a href=env.URL_HOST+'promo-backend/display/"+dd.id+"/"+dd.display+"' class='btn btn-sm btn-danger'>No</a>"
                   else
-                    -var disp = "<a href='http://localhost:3000/promo-backend/display/"+dd.id+"/"+dd.display+"' class='btn btn-sm btn-success'>Yes</a>"
+                    -var disp = "<a href=env.URL_HOST+'promo-backend/display/"+dd.id+"/"+dd.display+"' class='btn btn-sm btn-success'>Yes</a>"
                   tr
                     td= (i+1)
                     td= dd.title
@@ -47,10 +47,10 @@ block content-back
                     //- td= dd.create_at
                     td !{disp}
                     td
-                      a.btn.btn-sm.btn-warning(href='http://localhost:3000/promo-backend/form/'+dd.id)
+                      a.btn.btn-sm.btn-warning(href=env.URL_HOST+'promo-backend/form/'+dd.id)
                         i.fa.fa-edit
                         | &nbsp; update
                       | &nbsp;
-                      a.btn.btn-sm.btn-danger(href='http://localhost:3000/promo-backend/remove/'+dd.id)
+                      a.btn.btn-sm.btn-danger(href=env.URL_HOST+'promo-backend/remove/'+dd.id)
                         i.fa.fa-edit
                         | &nbsp; delete

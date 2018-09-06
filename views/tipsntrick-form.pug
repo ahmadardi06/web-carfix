@@ -7,11 +7,11 @@ block content-back
       small you can manage the Tips and Trick Article
     ol.breadcrumb
       li
-        a(href='http://localhost:3000/administrator/dashboard')
+        a(href=env.URL_HOST+'administrator/dashboard')
           i.fa.fa-dashboard
           |  Home
       li
-        a(href='http://localhost:3000/articles-backend/index') Articles
+        a(href=env.URL_HOST+'articles-backend/index') Articles
       li.active Data tables
 
   .content
@@ -19,7 +19,7 @@ block content-back
       .col-xs-12
         .box
           .box-header
-            a.btn.btn-primary(href='http://localhost:3000/articles-backend/index') 
+            a.btn.btn-primary(href=env.URL_HOST+'articles-backend/index') 
               i.fa.fa-toggle-left
               | &nbsp; Back
             form(method='post', action=formData.action, role='form',  enctype='multipart/form-data')
@@ -38,8 +38,56 @@ block content-back
                         input.form-control(type='text', name='tag', placeholder='enter tag', required, value=formData.tag)
                     .form-group
                         textarea.wysiwyg.form-control(type='text', name='body', placeholder='enter body', required, cols="30", rows="10")=formData.body
+                        input#upload(name='image', type='file', onchange='', style="display:none")
                     .form-group
                         input.btn.btn-success(type='submit', name='submit', value='Save Article')
-  script(src="https://cloud.tinymce.com/stable/tinymce.min.js")
+  script(src="https://tinymce.cachefly.net/4.2/tinymce.min.js")
   script.
-    tinymce.init({ selector:'textarea.wysiwyg' })
+    tinymce.init({
+      selector: "textarea",
+      theme: "modern",
+      paste_data_images: true,
+      plugins: [
+        "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+        "searchreplace wordcount visualblocks visualchars code fullscreen",
+        "insertdatetime media nonbreaking save table contextmenu directionality",
+        "emoticons template paste textcolor colorpicker textpattern"
+      ],
+      toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+      toolbar2: "print preview media | forecolor backcolor emoticons",
+      image_advtab: true,
+      file_picker_callback: function(callback, value, meta) {
+        
+        if (meta.filetype == 'image') {
+          $('#upload').trigger('click');
+          $('#upload').on('change', function() {
+            console.log('callback ',callback);
+            console.log('value ', value);
+            console.log('file ',this.files[0]);
+            $.ajax({
+              url: "!{env.URL_HOST}" + 'articles-backend/api/upload',
+              type: 'POST',
+              data: new FormData(this.files[0]),
+              success: (data)=>{
+                console.log('data ', data);
+              }
+            })
+            //- var file = this.files[0];
+            //- var reader = new FileReader();
+            //- reader.onload = function(e) {
+            //-   callback(e.target.result, {
+            //-     alt: ''
+            //-   });
+            //- };
+            //- reader.readAsDataURL(file);
+          });
+        }
+      },
+      templates: [{
+        title: 'Test template 1',
+        content: 'Test 1'
+      }, {
+        title: 'Test template 2',
+        content: 'Test 2'
+      }]
+    });

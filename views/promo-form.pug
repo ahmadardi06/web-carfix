@@ -7,11 +7,11 @@ block content-back
       small you can manage the promo
     ol.breadcrumb
       li
-        a(href='http://localhost:3000/administrator/dashboard')
+        a(href=env.URL_HOST+'administrator/dashboard')
           i.fa.fa-dashboard
           |  Home
       li
-        a(href='http://localhost:3000/promo-backend/index') Promo
+        a(href=env.URL_HOST+'promo-backend/index') Promo
       li.active Data tables
 
   .content
@@ -19,7 +19,7 @@ block content-back
       .col-xs-12
         .box
           .box-header
-            a.btn.btn-primary(href='http://localhost:3000/promo-backend/index') 
+            a.btn.btn-primary(href=env.URL_HOST+'promo-backend/index') 
               i.fa.fa-toggle-left
               | &nbsp; Back
             form(method='post', action=formData.action, role='form', enctype='multipart/form-data')
@@ -35,4 +35,4 @@ block content-back
                         label File
                         input.form-control(type='file', name='file', placeholder='enter file', required, value=formData.file)
                     .form-group
-                        input.btn.btn-success(type='submit', name='submit', value='Save Slider')
+                        input.btn.btn-success(type='submit', name='submit', value='Save Promo')
