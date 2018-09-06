@@ -142,6 +142,23 @@ router.post('/update', upload.single('file'), (req, res, next)=>{
 	});
 })
 
+router.get('/display/:id/:display', (req, res, next)=>{
+	var mArticles = new TArticles();
+
+	var display = req.params.display;
+	if(display === 'n'){
+		var sql = "UPDATE articles SET display = 'y' WHERE id = '"+req.params.id+"'";
+	}
+	else{
+		var sql = "UPDATE articles SET display = 'n' WHERE id = '"+req.params.id+"'";
+	}
+
+	mArticles.query(sql, (err, rows, fields)=>{
+		if(err) throw new Error(err);
+		res.redirect('/articles-backend/index')
+	});
+})
+
 router.get('/remove/:id', (req, res, next)=>{
 	var mArticles = new TArticles();
 	mArticles.remove("id = '"+req.params.id+"'", (err, result)=>{

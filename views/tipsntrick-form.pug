@@ -37,7 +37,7 @@ block content-back
                         label Tag
                         input.form-control(type='text', name='tag', placeholder='enter tag', required, value=formData.tag)
                     .form-group
-                        textarea.wysiwyg.form-control(type='text', name='body', placeholder='enter body', required, cols="30", rows="10")=formData.body
+                        textarea.wysiwyg.form-control(type='text', name='body', placeholder='enter body', cols="30", rows="10")=formData.body
                         input#upload(name='image', type='file', onchange='', style="display:none")
                     .form-group
                         input.btn.btn-success(type='submit', name='submit', value='Save Article')
