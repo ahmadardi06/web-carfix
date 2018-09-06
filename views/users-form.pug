@@ -40,7 +40,11 @@ block content-back
                     .form-group
                         label Role
                         select.form-control(name='role', required)
-                          option(value="admin") Admin
-                          option(value="client", selected) Client
+                          if formData.role === 'admin'
+                            option(value="admin", selected) Admin
+                            option(value="client") Client
+                          else
+                            option(value="admin") Admin
+                            option(value="client", selected) Client
                     .form-group
                         input.btn.btn-success(type='submit', name='submit', value='Save Users')

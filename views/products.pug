@@ -2,7 +2,7 @@ extends layout-front
 
 block content-front
   section.section-padding(style="margin-top: 64px")
-    .container    
+    .container#main-product    
       .row
         .col-md-12.Material-title-section.wow.animated.fadeInLeft(data-wow-delay='.2s')
           h1.section-title Sparepart
@@ -13,36 +13,18 @@ block content-front
 
         #Material-portfolio.portfolio-item-wrapper.clearfix.wow.animated.fadeInUp.col-md-12(data-wow-delay='.5s')
           .row
-            .col-4.col-lg-4.col-xl-4.pb-4.mix.business
-              figure.single-portfolio(style="margin-left: 20%;margin-right: 20%")
-                img.img-fluid(src='assets/images/product/product-1.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Michelin
-                  p Michelin.
-            .col-4.col-lg-4.col-xl-4.mix.development.more
-              figure.single-portfolio(style="margin-left: 20%;margin-right: 20%")
-                img.img-fluid(src='assets/images/product/product-2.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Shell
-                  p Shell.
-            .col-4.col-lg-4.col-xl-4.mix.creative.business
-              figure.single-portfolio(style="margin-left: 20%;margin-right: 20%")
-                img.img-fluid(src='assets/images/product/product-3.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Incoe
-                  p Incoe.
+            template(v-for="item, iter in productResults")
+              template(v-if='item.product_type == "sparepart"')
+                .col-6.col-lg-4.col-xl-4.pb-4.mix.business
+                  figure.single-portfolio(style="margin-left: 20%;margin-right: 20%")
+                    img.img-fluid(v-bind:src='"assets/images/product/"+item.file' v-bind:alt='item.title')
+                    figcaption.hover-content
+                      //- a.btn.btn-round.btn-fab.btn-xs(href='#')
+                      //-   i.material-icons.mdi.mdi-arrow-right
+                      //-   .ripple-container
+                      a(href='#')
+                        h2.subtitle {{ item.title }}
+                      p {{ item.description }}
       hr
       .row
         .col-md-12.Material-title-section.wow.animated.fadeInLeft(data-wow-delay='.7s')
@@ -51,125 +33,17 @@ block content-front
             | jasa service untuk all merk mobil, meliputi :
           br
         .portfolio-item-wrapper.clearfix.wow.animated.fadeInUp.col-md-12(data-wow-delay='.10s')
-          .row         
-            .col-6.col-lg-3.col-xl-3.pb-3.mix.business
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product11.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Oil
-                  p Oil.
-            .col-6.col-lg-3.col-xl-3.mix.development.more
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product12.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Battery
-                  p Battery.
-            .col-6.col-lg-3.col-xl-3.mix.creative.business
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product13.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Tyre
-                  p Tyre.
-            .col-6.col-lg-3.col-xl-3.mix.creative.business
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product14.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Shock Abs
-                  p Shock Abs.
-
-            .col-6.col-lg-3.col-xl-3.pb-3.mix.business
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product15.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Spooring
-                  p Spooring.
-            .col-6.col-lg-3.col-xl-3.mix.development.more
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product16.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Brake
-                  p Brake.
-            .col-6.col-lg-3.col-xl-3.mix.creative.business
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product17.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Engine
-                  p Engine.
-            .col-6.col-lg-3.col-xl-3.mix.creative.business
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product18.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Gear
-                  p Gear.
-            .col-6.col-lg-3.col-xl-3.pb-3.mix.business
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product19.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle AC
-                  p AC.
-            .col-6.col-lg-3.col-xl-3.mix.development.more
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product20.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle Electrical
-                  p Electrical.
-            .col-6.col-lg-3.col-xl-3.mix.creative.business
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product21.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle UV Ozone
-                  p UV Ozone.
-            .col-6.col-lg-3.col-xl-3.mix.creative.business
-              figure.single-portfolio
-                img.img-fluid(src='assets/images/product/product22.png' alt='')
-                figcaption.hover-content
-                  a.btn.btn-round.btn-fab.btn-xs(href='#')
-                    i.material-icons.mdi.mdi-arrow-right
-                    .ripple-container
-                  a(href='#')
-                    h2.subtitle All Service
-                  p All Service.
+          .row
+            template(v-for="item, iter in productResults")
+              template(v-if='item.product_type == "service"')
+                .col-6.col-lg-3.col-xl-3.pb-3.mix.business
+                  figure.single-portfolio(style="margin-left: 20%;margin-right: 20%; margin-bottom: 10%")
+                    img.img-fluid(v-bind:src='"assets/images/product/"+item.file' v-bind:alt='item.title')
+                    figcaption.hover-content
+                      //- a.btn.btn-round.btn-fab.btn-xs(href='#')
+                      //-   i.material-icons.mdi.mdi-arrow-right
+                      //-   .ripple-container
+                      a(href='#')
+                        h2.subtitle {{ item.title }}
+                      p {{ item.description }}
+  script(src=env.URL_HOST+"assets/js/products-vue.js")
