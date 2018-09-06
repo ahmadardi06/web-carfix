@@ -12,177 +12,31 @@ block content-front
     .container
       .row
         .col-md-12.col-lg-8.col-xs-12.blog-post-column
-          .row
-            .col-md-6.no-padding
-              .col-md-12.wow.animated.fadeInUp(data-wow-delay='.2s')
-                article.single-blog-post
-                  .featured-image
-                    a(href='#')
-                      img(src='assets/images/blog/featured1.jpg' alt='')
-                  .post-meta
-                    .post-date
-                      span
-                        b Jan 25 2018
-                    a(href='/article')
-                      h2.subtitle MUSIC for refreshment
-                    p
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
-                  .meta-tags
-                    span.comments
+          .row#appEn
+            template(v-for="item, iterasi in enResults")
+              .col-md-6.no-padding
+                .col-md-12.wow.animated.fadeInUp(data-wow-delay='.2s')
+                  article.single-blog-post
+                    .featured-image
                       a(href='#')
-                        i.mdi.mdi-comment-outline
-                        |  24 Comments
-                    a.btn.btn-round.btn-fab(href='/article')
-                      i.material-icons.mdi.mdi-arrow-right
-                      .ripple-container
-              .col-md-12.wow.animated.fadeInUp(data-wow-delay='.3s')
-                article.single-blog-post
-                  .featured-image
-                    a(href='#')
-                      img(src='assets/images/blog/featured2.jpg' alt='')
-                  .post-meta
-                    .post-date
-                      span
-                        b Feb 25 2018
-                    a(href='blog-single.html')
-                      h2.subtitle Kelly Grover
-                    p
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
-                  .meta-tags
-                    span.comments
-                      a(href='#')
-                        i.mdi.mdi-comment-outline
-                        |  24 Comments
-                    a.btn.btn-round.btn-fab(href='blog-single.html')
-                      i.material-icons.mdi.mdi-arrow-right
-                      .ripple-container
-              .col-md-12.wow.animated.fadeInUp(data-wow-delay='.4s')
-                article.single-blog-post
-                  .featured-image
-                    a(href='#')
-                      img(src='assets/images/blog/featured3.jpg' alt='')
-                  .post-meta
-                    .post-date
-                      span
-                        b Mar 25 2018
-                    a(href='blog-single.html')
-                      h2.subtitle We support your custom
-                    p
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
-                  .meta-tags
-                    span.comments
-                      a(href='#')
-                        i.mdi.mdi-comment-outline
-                        |  24 Comments
-                    a.btn.btn-round.btn-fab(href='blog-single.html')
-                      i.material-icons.mdi.mdi-arrow-right
-                      .ripple-container
-              .col-md-12.wow.animated.fadeInUp(data-wow-delay='.5s')
-                article.single-blog-post
-                  .featured-image
-                    a(href='#')
-                      img(src='assets/images/blog/featured4.jpg' alt='')
-                  .post-meta
-                    .post-date
-                      span
-                        b April 25 2018
-                    a(href='blog-single.html')
-                      h2.subtitle We love photography
-                    p
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
-                  .meta-tags
-                    span.comments
-                      a(href='#')
-                        i.mdi.mdi-comment-outline
-                        |  24 Comments
-                    a.btn.btn-round.btn-fab(href='blog-single.html')
-                      i.material-icons.mdi.mdi-arrow-right
-                      .ripple-container
-            .col-md-6.no-padding
-              .col-md-12.wow.animated.fadeInUp(data-wow-delay='.3s')
-                article.single-blog-post
-                  .featured-image
-                    a(href='#')
-                      img(src='assets/images/blog/featured5.jpg' alt='')
-                  .post-meta
-                    .post-date
-                      span
-                        b Sep 25 2018
-                    a(href='blog-single.html')
-                      h2.subtitle Kelly Grover
-                    p
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
-                  .meta-tags
-                    span.comments
-                      a(href='#')
-                        i.mdi.mdi-comment-outline
-                        |  24 Comments
-                    a.btn.btn-round.btn-fab(href='blog-single.html')
-                      i.material-icons.mdi.mdi-arrow-right
-                      .ripple-container
-              .col-md-12.wow.animated.fadeInUp(data-wow-delay='.5s')
-                article.single-blog-post
-                  .featured-image
-                    a(href='#')
-                      img(src='assets/images/blog/featured6.jpg' alt='')
-                  .post-meta
-                    .post-date
-                      span
-                        b Oct 25 2018
-                    a(href='blog-single.html')
-                      h2.subtitle Kelly Grover
-                    p
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
-                  .meta-tags
-                    span.comments
-                      a(href='#')
-                        i.mdi.mdi-comment-outline
-                        |  24 Comments
-                    a.btn.btn-round.btn-fab(href='blog-single.html')
-                      i.material-icons.mdi.mdi-arrow-right
-                      .ripple-container
-              .col-md-12.wow.animated.fadeInUp(data-wow-delay='.6s')
-                article.single-blog-post
-                  .featured-image
-                    a(href='#')
-                      img(src='assets/images/blog/featured7.jpg' alt='')
-                  .post-meta
-                    .post-date
-                      span
-                        b Nov 25 2018
-                    a(href='blog-single.html')
-                      h2.subtitle Kelly Grover
-                    p
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
-                  .meta-tags
-                    span.comments
-                      a(href='#')
-                        i.mdi.mdi-comment-outline
-                        |  24 Comments
-                    a.btn.btn-round.btn-fab(href='blog-single.html')
-                      i.material-icons.mdi.mdi-arrow-right
-                      .ripple-container
-              .col-md-12.wow.animated.fadeInUp(data-wow-delay='.7s')
-                article.single-blog-post
-                  .featured-image
-                    a(href='#')
-                      img(src='assets/images/blog/featured8.jpg' alt='')
-                  .post-meta
-                    .post-date
-                      span
-                        b Dec 25 2018
-                    a(href='blog-single.html')
-                      h2.subtitle Kelly Grover
-                    p
-                      | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio perferendis assumenda ipsum maiores dolorum similique obcaecati perspiciatis.
-                  .meta-tags
-                    span.comments
-                      a(href='#')
-                        i.mdi.mdi-comment-outline
-                        |  24 Comments
-                    a.btn.btn-round.btn-fab(href='blog-single.html')
-                      i.material-icons.mdi.mdi-arrow-right
-                      .ripple-container
+                        img(v-bind:src="'assets/images/article/'+item.file" alt='')
+                    .post-meta
+                      .post-date
+                        span
+                          //- b(v-text='dateIndo(item.created_at)')
+                          b {{ dateIndo(item.created_at) }}
+                      a(href='/article')
+                        h2.subtitle {{item.title}}
+                      
+                    .meta-tags
+                      span.comments
+                        a(href='#')
+                          i.mdi.mdi-comment-outline
+                          |  24 Comments
+                      a.btn.btn-round.btn-fab(href='/article')
+                        i.material-icons.mdi.mdi-arrow-right
+                        .ripple-container
+              
             .col-md-12.text-center.mt-3.blog-pagination.wow.animated.fadeInUp(data-wow-delay='.4s')
               a.btn.btn-common(href='javascript:void(0)')
                 i.material-icons.mdi.mdi.mdi-autorenew
@@ -214,3 +68,4 @@ block content-front
                 a(href='#') Journal (16)
               li
                 a(href='#') Works (7)
+  script(src=env.URL_HOST+'assets/js/articles-vue.js')

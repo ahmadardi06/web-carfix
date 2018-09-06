@@ -164,4 +164,20 @@ router.get('/remove/:id', (req, res, next)=>{
 	})
 })
 
+router.get('/api/tt/all', (req, res, next)=>{
+	var mArticles = "select * from articles where article_type = 'tt'";
+	Db.query(mArticles, (err, rows, result)=>{
+		if(err) throw new Error(err);
+		res.json(rows);
+	})
+})
+
+router.get('/api/en/all', (req, res, next)=>{
+	var mArticles = "select * from articles where article_type = 'en'";
+	Db.query(mArticles, (err, rows, result)=>{
+		if(err) throw new Error(err);
+		res.json(rows);
+	})
+})
+
 module.exports = router;
