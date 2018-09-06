@@ -4,21 +4,22 @@ html(lang='en')
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     title Carfix Indonesia
-    link(rel='icon', href='assets/images/logo/icon-med.jpg')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/bootstrap.min.css')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/materialdesignicons.min.css')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/material.min.css')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/ripples.min.css')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/owl.carousel.css')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/magnific-popup.css')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/slicknav.css')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/animate.css')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/style.css')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/responsive.css')
-    link(rel='stylesheet', href='http://localhost:3000/assets/css/color-switcher.css')
-    link(rel='stylesheet', type='text/css', href='http://localhost:3000/assets/css/colors/indigo.css', media='screen')
+    link(rel='icon', href=env.URL_HOST+'assets/images/logo/icon-med.jpg')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/bootstrap.min.css')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/materialdesignicons.min.css')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/material.min.css')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/ripples.min.css')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/owl.carousel.css')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/magnific-popup.css')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/slicknav.css')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/animate.css')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/style.css')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/responsive.css')
+    link(rel='stylesheet', href=env.URL_HOST+'assets/css/color-switcher.css')
+    link(rel='stylesheet', type='text/css', href=env.URL_HOST+'assets/css/colors/indigo.css', media='screen')
     script(src="https://unpkg.com/vue")
     script(src="https://unpkg.com/axios/dist/axios.min.js")
+    script(src=env.URL_HOST+'assets/js/environtment.js')
   body
     header#header
       nav#appMenu.navbar.navbar-expand-lg.fixed-top.scrolling-navbar.nav-bg(style='border-bottom: 4px solid #5166d8;')
@@ -30,7 +31,7 @@ html(lang='en')
               span.mdi.mdi-menu
               span.mdi.mdi-menu
             a.navbar-brand(href='/')
-              img(src='http://localhost:3000/assets/images/logo/logo-carfix.png', alt='')
+              img(src=env.URL_HOST+'assets/images/logo/logo-carfix.png', alt='')
           #main-navbar.collapse.navbar-collapse
             ul.navbar-nav.mr-auto.w-100.justify-content-end
               li.nav-item
@@ -123,7 +124,7 @@ html(lang='en')
             ul.image-list
               li
                 figure.overlay
-                  img.img-fluid(src='http://localhost:3000/assets/images/art/a1.jpg', alt='')
+                  img.img-fluid(src=env.URL_HOST+'assets/images/art/a1.jpg', alt='')
                   figcaption
                     a(href='blog-single.html')
                       i.mdi.mdi-link-variant.from-top.icon-xs
@@ -134,7 +135,7 @@ html(lang='en')
                     span.date 12 Jan 2019
               li
                 figure.overlay
-                  img.img-fluid(src='http://localhost:3000/assets/images/art/a2.jpg', alt='')
+                  img.img-fluid(src=env.URL_HOST+'assets/images/art/a2.jpg', alt='')
                   figcaption
                     a(href='blog-single.html')
                       i.mdi.mdi-link-variant.from-top.icon-xs
@@ -145,7 +146,7 @@ html(lang='en')
                     span.date 12 Jan 2019
               li
                 figure.overlay
-                  img.img-fluid(src='http://localhost:3000/assets/images/art/a3.jpg', alt='')
+                  img.img-fluid(src=env.URL_HOST+'assets/images/art/a3.jpg', alt='')
                   figcaption
                     a(href='blog-single.html')
                       i.mdi.mdi-link-variant.from-top.icon-xs
@@ -207,22 +208,22 @@ html(lang='en')
     #preloader
       #loader-1.loader
 
-    script(src='http://localhost:3000/assets/js/jquery-min.js')
-    script(src='http://localhost:3000/assets/js/popper.min.js')
-    script(src='http://localhost:3000/assets/js/bootstrap.min.js')
-    script(src='http://localhost:3000/assets/js/jquery.mixitup.min.js')
-    script(src='http://localhost:3000/assets/js/jquery.inview.js')
-    script(src='http://localhost:3000/assets/js/jquery.counterup.min.js')
-    script(src='http://localhost:3000/assets/js/scroll-top.js')
-    script(src='http://localhost:3000/assets/js/smoothscroll.js')
-    script(src='http://localhost:3000/assets/js/material.min.js')
-    script(src='http://localhost:3000/assets/js/ripples.min.js')
-    script(src='http://localhost:3000/assets/js/owl.carousel.min.js')
-    script(src='http://localhost:3000/assets/js/form-validator.min.js')
-    script(src='http://localhost:3000/assets/js/contact-form-script.min.js')
-    script(src='http://localhost:3000/assets/js/wow.js')
-    script(src='http://localhost:3000/assets/js/jquery.vide.js')
-    script(src='http://localhost:3000/assets/js/jquery.magnific-popup.min.js')
-    script(src='http://localhost:3000/assets/js/jquery.slicknav.js')
-    script(src='http://localhost:3000/assets/js/main.js')
-    script(src='http://localhost:3000/assets/js/web-carfix.js')
+    script(src=env.URL_HOST+'assets/js/jquery-min.js')
+    script(src=env.URL_HOST+'assets/js/popper.min.js')
+    script(src=env.URL_HOST+'assets/js/bootstrap.min.js')
+    script(src=env.URL_HOST+'assets/js/jquery.mixitup.min.js')
+    script(src=env.URL_HOST+'assets/js/jquery.inview.js')
+    script(src=env.URL_HOST+'assets/js/jquery.counterup.min.js')
+    script(src=env.URL_HOST+'assets/js/scroll-top.js')
+    script(src=env.URL_HOST+'assets/js/smoothscroll.js')
+    script(src=env.URL_HOST+'assets/js/material.min.js')
+    script(src=env.URL_HOST+'assets/js/ripples.min.js')
+    script(src=env.URL_HOST+'assets/js/owl.carousel.min.js')
+    script(src=env.URL_HOST+'assets/js/form-validator.min.js')
+    script(src=env.URL_HOST+'assets/js/contact-form-script.min.js')
+    script(src=env.URL_HOST+'assets/js/wow.js')
+    script(src=env.URL_HOST+'assets/js/jquery.vide.js')
+    script(src=env.URL_HOST+'assets/js/jquery.magnific-popup.min.js')
+    script(src=env.URL_HOST+'assets/js/jquery.slicknav.js')
+    script(src=env.URL_HOST+'assets/js/main.js')
+    script(src=env.URL_HOST+'assets/js/web-carfix.js')

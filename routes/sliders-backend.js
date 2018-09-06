@@ -38,7 +38,7 @@ router.get('/form', (req, res, next)=>{
 		title: '',
 		description: '',
 		file: '',
-		action: 'http://localhost:3000/sliders-backend/add',
+		action: env.URL_HOST+'sliders-backend/add',
 	};
 	res.render('sliders-form', {formData: formData})
 })
@@ -51,7 +51,7 @@ router.get('/form/:id', (req, res, next)=>{
 			title: rows[0].title,
 			description: rows[0].description,
 			file: rows[0].file,
-			action: 'http://localhost:3000/sliders-backend/update',
+			action: env.URL_HOST+'sliders-backend/update',
 		};
 		res.render('sliders-form', {formData: formData})
 	})

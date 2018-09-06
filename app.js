@@ -29,6 +29,8 @@ var contactusBackendRouter = require('./routes/contactus-backend');
 var usersBackendRouter = require('./routes/users-backend');
 
 var app = express();
+require('dotenv').config();
+app.locals.env = process.env;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
