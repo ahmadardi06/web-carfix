@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2018 at 11:33 AM
+-- Generation Time: Sep 06, 2018 at 03:09 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -45,8 +45,11 @@ CREATE TABLE `articles` (
 --
 
 INSERT INTO `articles` (`id`, `title`, `body`, `file`, `tag`, `article_type`, `display`, `account_id`, `created_at`) VALUES
-(6, '5 Kesalahan Orang Tua Saat Menggunakan Car Seat Untuk Si Kecil', 'Safety Belt atau biasa disebut sabuk pengaman bukanlah semata barang pajangan. Banyak orang yang menganggap barang ini sepele karena mungkin jarang mobil dipakai ngebut atau dalam kecepatan tinggi. Padahal sabuk pengaman ini sangat rawan sekali kegunaannya.\r\n\r\nDemikian pula dengan kebutuhan anak kita. Si kecil tentunya tidak cukup pas bila menggunakan sabuk pengamana. Oleh karena itu, ada kalanya pengendara menggunakan car seat khusus untuk anak.\r\n\r\nNah, berikut ini beberapa kesalahan yang umumnya dilakukan orang tua saat menggunakan car seat atau jok tambahan untuk si kecil :\r\n\r\n1. Memilih Kursi Yang Ukurannya Tidak Sesuai Dengan Usia, Berat Badan, dan Tinggi Si Kecil\r\n\r\nSaat hendak membeli car seat untuk anak, beberapa orang tua kurang mempertimbangkan masalah ukuran kursi dan juga ukuran anaknya beberapa waktu kedepan. Mereka cenderung melihat merk dan juga tampilannya yang bagus. Padahal mempertimbangkan soal ukuran ini sangat penting loh Mom, karena si kecil itu akan tumbuh semakin besar, semakin berat, dan semakin tinggi. Jadi, bagaimana bisa jika Mom hanya melihatnya pada saat itu, okelah jika saat ini selama sebulan masih muat, tapi bagaimana jika beberapa bulan si kecil terus tumbuh, tentu car seat itu akan semakin tidak nyaman untuk digunakan. Dan perlu diingat, biasanya car seatmemiliki waktu kadaluarsa atau layak pakai sekitar enam tahun setelah waktu produksi, jadi pikirkanlah ukuran yang kurang lebih untuk enam tahun kedepan.\r\n\r\nSelain itu, hal lain yang perlu diingat adalah Mom tidak disarankan membelicar seat bekas ya, karena kita tentu tidak tahu apakah penggunaan sebelumnya memang layak atau tidak, bagaimana jika bekas kecelakaan, atau mungkin ada bagiannya yang cacat, tentu ini akan  sangat berbahaya bagi si kecil.\r\n\r\n2. Banyak Orang Tua Yang Tidak Menginstal Car Seat Dengan Benar\r\n\r\nBanyak orang tua menggunakan carseat untuk buah hati mereka, namun ternyata hanya sedikit yang telah memasangnya dengan benar. Beberapa kesalahan yang menonjol sering terjadi adalah Routing sabuk pengaman yang tidak terpasang dengan benar, tidak menempatkan sabuk pengaman dalam mode terkunci, tidak menggunakan kedua jangkar yang lebih rendah dari sistem pengaman di sabuk pengaman, tidak menghubungkan jangkar yang lebih rendah dan tethers sistem LATCH ke titik yang salah di dalam mobil terutama pada kait kargo, atau bahkan Mom pernah lupa untuk mengaitkannya sama sekali. Hal-hal ini justru akan menimbulkan bahaya yang lebih besar melebihi kita tak memakai car seat. Jadi, kalau mau nyaman ya harus aman.\r\n\r\n3. Tidak Menggunakan Jasa Profesional Untuk Memasang Car Seat\r\n\r\nMungkin semula Mom berpikir bahwa memasang dan menginstal car seat adalah suatu hal yang mudah dan sepele, yang tentu saja bisa dilakukan sendiri. Memang sih ada benarnya, tapi apakah yakin bahwa memasang sendiri sudah pasti beanr dan sesuai prosedur? Ingat, jangan menciptakan benda berbahaya untuk si kecil loh Mom.\r\n\r\nMenginstal car seat berbeda dengan memasang kursi goyang kecil di rumah yang akan membuat si kecil tertidur, jadi jangan menyamakannya. Car seat adalah sebuah alat yang dirancang untuk keselamatan si kecil, car seat dirancang agar bisa tetap aman untuk berkendara dengan kecepatan tertentu, dan menjauhkan dari hal berbahaya saat terjadi kecelakaan. Tapi apa jadinya jika kita melakukan kesalahan dalam memasangnya, tentu alat keamanan ini justru akan membahayakan. Jadi, apa salahnya kita menggunakan jasa profesional untuk menginstal car seat, agar keamanan lebih terjamin.\r\n\r\n4. Pemasangan Sabuk Pengaman Car Seat Yang Nyaman, Tetapi Tidak Aman\r\n\r\nSabuk pengaman yang benar harus dipasang dengan aman, jadi pastikanMom setidaknya hanya menyisakan jarak satu jari saja antara badan si kecil dan sabuk. Mungkin si kecil merasa ini tidak nyaman, karena terlalu kenacang atau membuat sulit bergerak, namun pada kenyataannya inilah hal yang aman, dan hal yang aman memang tidak selalu nyaman.\r\n\r\nKarena harness atau sabuk ini berfungsi untuk menahan badan si kecil terlindungi dan memperlambat benturan atau badan yang terpental saat kendaraan yang berada dalam kecepatan tinggi berhenti tiba-tiba. Selain itu,Mom juga tidak perlu menambah aksesori lain di sabuk pengaman, terlebih jika benda itu tak bersertifikat.\r\n\r\n5. Tidak Menggunakan Tether Bisa Membayakan Si Kecil \r\n\r\nMom, mungkin kita sering mengabaikan hal satu ini, Tether yang bahkan tak banyak diketahui fungsi benda satu ini. Itu loh Mom tali panjang yang ada di dekat pintu, atau alas mobil. Sebenarnya Tether ini berfungsi mengencangkancar seat agar tidak mudah terpental, kita bisa mengaitkannya dengan jangkar yang berada di belakang senderan kepala. Menggunakan tether ternyata menurunkan kecelakaan ekstrim pada si kecil, karena ini menyangkut seberapa jauh kepala anak bergerak maju empat sampai delapan inci dengan kursi mobil yang terpasang dengan baik, dan bisa dibayangkan jika tether ini tak digunakan, car seat akan mudah terpental.', 'article-1536138078594.jpg', 'safety', 'tt', 'y', 1, '2018-09-05 09:01:18'),
-(7, 'Shell Helix', '<p>this is the best</p>\r\n<ul>\r\n<li>a</li>\r\n<li>b</li>\r\n<li>c</li>\r\n</ul>\r\n<p>as always</p>\r\n<ol>\r\n<li>1</li>\r\n<li>2</li>\r\n<li>3</li>\r\n</ol>\r\n<p>&nbsp;</p>', 'article-1536226365908.png', 'service', 'tt', 'n', 1, '2018-09-06 09:32:45');
+(8, '5 Cara Merawat Mobil Tua', '<p>Anda memiliki mobil tua dan klasik tetapi belum tahu bagaimana cara merawat mobil tua?</p>\r\n<p>Nah, perlu untuk diketahui bahwa perawatan mobil tua tidaklah sama dengan merawat mobil baru. Ada banyak alasan seseorang lebih menyukai mobil tua, biasnaya karena klasik dan keunikan dari mobil tersbut.</p>\r\n<p>Mobil tua akan lebih membutuhkan tenaga karena cara merawat mobil tua membutuhkan penangnanan khusus.</p>\r\n<h2>5 Cara Merawat Mobil Tua</h2>\r\n<p>Bagi anda yang belum mengerti, jangan sembarangan merawat mobil. Berikut ini adalah cara merawat mobil tua yang baik.</p>\r\n<ol>\r\n<li>\r\n<h3>Rutin Memperhatian Kondisi Mesin Mobil</h3>\r\n</li>\r\n</ol>\r\n<p>Mobil tua biasanya memiliki permasalahan pada kaki-kaki mobil. Oleh karena itu maka sangat diperlukan dilakukan perawatan dan perhatian secara rutin pada beberapa bagian ban, rem, sill, gas, dan lain-lain.</p>\r\n<ol start=\"2\">\r\n<li>\r\n<h3>Lakukan Penggantian Oli Secara Berkala</h3>\r\n</li>\r\n</ol>\r\n<p>Cara merawat mobil tua selanjutnya adalah dengan melakukan penggantian oli mobil secara berkala. Karena oli berfungsi sebagai pelumas mesin, maka jangan sampai keliru dalam memilih jenis oli yang digunakan.</p>', 'article-1536227570457.jpg', 'rawat, mobil', 'tt', 'y', 1, '2018-09-06 09:52:50'),
+(9, 'Ketahui Cara Perawatan Body Mobil Agar Tidak Mudah Rusak', '<p><strong>Ketahui Cara Perawatan Body Mobil Agar Tidak Mudah Rusak</strong>&nbsp;&ndash;&nbsp;Ada dua jenis perawatan pada mobil, yakni perawatan interior (mesin, desain dalam mobil) dan perawatan exterior (ban, body).</p>\r\n<p>Nah kali ini akan dibahas sedikit lebih detail mengenai cara perawatan body mobil dengan tujuan agar body mobil tidak cepat rusak.</p>\r\n<p>Tentunya semua pemilik mobil menginginkan mobilnya tetap terlihat konclong tanpa cacat sehingga mobil yang sebenarnya sudah berumur terlihat tetap seperti baru. Body mobil juga termasuk warna mobil.&nbsp;<strong>Baca:&nbsp;<a href=\"http://www.carfix.co.id/blog/tips-memilih-warna-mobil-yang-bagus/\">Tips Memilih Warna Mobil yang Bagus dan Tahan Lama</a>.</strong></p>', 'article-1536227634935.jpg', 'rawat, mobil', 'tt', 'y', 1, '2018-09-06 09:53:54'),
+(10, 'Tips Sederana Mengecek Kondisi Mesin Mobil Bekas Untuk Pemula', '<p><strong>Tips Sederana Mengecek Kondisi Mesin Mobil Bekas Untuk Pemula</strong>&nbsp;&ndash;&nbsp;Membeli mobil bekas tidak akan pernah lepas dari yang namanya was-was atau kekhawatiran kondisi mobil masih layak atau tidak.</p>\r\n<p>Terutama untuk seorang pemula yang tidak tahu menahu mengenai mesin mobil. Karena ketidak tahuan inilah, akhirnya banyak yang tertipu dengan tampilan luar mobil tanpa memperhatikan dan mengecek secara mendetail kondisi mesin mobil bekas.</p>\r\n<p><strong>Baca Juga:&nbsp;<a href=\"http://www.carfix.co.id/blog/tips-memilih-mobil-bekas-dan-cara-membelinya/\">Tips Memilih Mobil Bekas dan Cara Membelinya Agar Tidak Mudah Tertipu</a>.</strong></p>\r\n<ol>\r\n<li>\r\n<h3>Membuka Kap Mesin dan Mengecek Kondisi Fisik Mesin</h3>\r\n</li>\r\n</ol>\r\n<p>Langkah pertama untuk mengecek kondisi mobil bekas adalah dengan membuka kap mesin mobil. Di dalam sana akan terlihat apakah mobil tersebut pernah turun mesin atau tidak.</p>\r\n<p>Kondisi ruang mesin yang pernah di cat mengindikasikan kalau mobil pernah turun mesin, jika sudah tahu maka anda tinggal menanyakan alasan kenapa harus turun mesin.</p>', 'article-1536238775467.jpg', 'mesin, mobil, perawatan', 'tt', 'y', 1, '2018-09-06 12:59:35'),
+(11, 'Daftar alamat bengkel mobil di Semarang', '<p><strong>Daftar alamat bengkel mobil di Semarang Tel. 0815-7708-070</strong>&nbsp;&ndash;&nbsp;Sudah menjadi rahasia umum apabila sebuah mobil mengalami sebuah kerusakan tidak bisa lepas dari yang namanya bengkel mobil.</p>\r\n<p>Ya, memang bengkel mobil adalah tempat untuk melakukan perawatan atau memperbaiki komponen mobil yang mengalami kerusakan.</p>\r\n<p>CARfix adalah bengkel terkemuka di Semarang. Kami juga membuka layanan service 24 jam.</p>\r\n<p>Perkembangan bengkel perusahaan kami juga sudah tersebar di area Joglosemar (Jogja, Solo dan Semarang). Sehingga tak ada keraguan terhadap eksistensi usaha kami.</p>\r\n<p>Dengan didukung oleh teknisi yang bersertifikat dan diakui resmi, kami bangga memperkenalkan perusahaan kami. CARfix yang terdiri dari teknisi berpengalaman dan berpendidikan baik.</p>\r\n<p>Sebagai salah satu kota paling berkembang di Pulau Jawa, Kota Semarang mempunyai jumlah penduduk yang hampir mencapai 2 juta jiwa dan siang hari bisa mencapai 2,5 juta jiwa.</p>\r\n<p>Bahkan, Area Metropolitan Kedungsapur (Kendal, Demak, Ungaran Kabupaten Semarang, Kota Salatiga, dan Purwodadi Kabupaten Grobogan) dengan penduduk sekitar 6 juta jiwa, merupakan Wilayah Metropolis terpadat keempat, setelah Jabodetabek (Jakarta), Gerbangkertosusilo (Surabaya), dan Bandung Raya.</p>', 'article-1536238876718.jpg', 'alamat, tempat', 'en', 'y', 1, '2018-09-06 13:01:16'),
+(12, 'Bengkel Mobil Semarang', '<p><strong>Bengkel Mobil Semarang Tel. 0815-7708-070</strong>&nbsp;&ndash;&nbsp;Carfix adalah bengkel terkemuka di Joglosemar (Jogjakarta, Solo, dan Semarang).</p>\r\n<p>Kami telah mendirikan perusahaan cabang-cabang bengkel kami di setiap kota-kota yang ada di Joglosemar.</p>\r\n<p>Dengan didukung oleh teknisi yang bersertifikat dan diakui resmi, kami bangga memperkenalkan perusahaan kami. Carfix yang terdiri dari teknisi berpengalaman dan berpendidikan baik.</p>\r\n<p>Sebagai salah satu kota paling berkembang di Pulau Jawa, Kota Semarang mempunyai jumlah penduduk yang hampir mencapai 2 juta jiwa dan siang hari bisa mencapai 2,5 juta jiwa.</p>\r\n<p>Bahkan, Area Metropolitan Kedungsapur (Kendal, Demak, Ungaran Kabupaten Semarang, Kota Salatiga, dan Purwodadi Kabupaten Grobogan) dengan penduduk sekitar 6 juta jiwa, merupakan Wilayah Metropolis terpadat keempat, setelah Jabodetabek (Jakarta), Gerbangkertosusilo (Surabaya), dan Bandung Raya.</p>\r\n<p>Dalam beberapa tahun terakhir, perkembangan Semarang ditandai pula dengan munculnya beragam merek mobil terkenal.</p>\r\n<p>Untuk itu, kami Carfix Indonesia melayani jasa perbaikan mobil Anda jika mengalami masalah. Kami juga melayani jasa panggilan.</p>', 'article-1536238950250.jpg', 'bengkel mobil', 'en', 'y', 1, '2018-09-06 13:02:30');
 
 -- --------------------------------------------------------
 
@@ -71,7 +74,8 @@ INSERT INTO `networks` (`id`, `title`, `link`, `created_at`) VALUES
 (8, 'Carfix WR Supratman', 'http://carfix-wr-supratman.business.site', '2018-09-04 15:43:07'),
 (9, 'Carfix Mrican', 'http://carfix-mrican.business.site', '2018-09-04 15:43:20'),
 (10, 'Carfix Yos Sudarso', 'http://carfix-solo.business.site', '2018-09-04 15:43:33'),
-(11, 'Carfix Bantul', 'http://carfix-bantul.business.site', '2018-09-04 15:43:46');
+(11, 'Carfix Bantul', 'http://carfix-bantul.business.site', '2018-09-04 15:43:46'),
+(18, 'Carfix Surabaya', 'http://carfix-sby.business.site', '2018-09-06 12:53:26');
 
 -- --------------------------------------------------------
 
@@ -129,7 +133,9 @@ CREATE TABLE `promo` (
 --
 
 INSERT INTO `promo` (`id`, `title`, `description`, `file`, `display`, `created_at`) VALUES
-(2, 'CARFIX PROMO RAMADHAN', 'Service Mobil Anda di CARFIX Terdekat', 'promo-1536122996223.jpg', 'y', '2018-09-05 04:49:56');
+(3, 'Paket Ramadhan', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.', 'promo-1536227111256.png', 'y', '2018-09-06 09:45:11'),
+(4, 'Paket Cepat', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.', 'promo-1536227160683.jpg', 'y', '2018-09-06 09:46:00'),
+(5, 'Spooring Balancing Berhadiah Emas', 'CARfix tiada hentinya menghadirkan kejutan buat memanjakan konsumen di Semarang, Solo dan Yogya. Kali ini peluang terbuka lebar bagi konsumen untuk mendapatkan hadiah emas melalui Program terbaru.', 'promo-1536238529608.jpg', 'y', '2018-09-06 12:55:29');
 
 -- --------------------------------------------------------
 
@@ -178,7 +184,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `username`, `password`, `role`, `created_at`) VALUES
 (1, 'CARfix Admin', 'admin@carfix.id', 'adminCARfix', '28112d2da54b1fbaa1a1ce9e796fd636', 'superadmin', '2018-09-06 04:18:00'),
-(2, 'Pak Eko', 'jurnalis@carfix.co.id', 'masukpakeko', '5e32cf16aa428d230e7f21fcf32d4ee1', 'admin', '2018-09-06 04:49:45');
+(2, 'Pak Eko', 'jurnalis@carfix.co.id', 'masukpakeko', '5e32cf16aa428d230e7f21fcf32d4ee1', 'admin', '2018-09-06 04:49:45'),
+(4, 'Ahmad Ardiansyah', 'ardiansyah3ber@gmail.com', 'ardiansyah3ber', 'be20ec6ed8731979e1fb58ea325a05c5', 'admin', '2018-09-06 13:05:05');
 
 --
 -- Indexes for dumped tables
@@ -228,37 +235,37 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `networks`
 --
 ALTER TABLE `networks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `promo`
 --
 ALTER TABLE `promo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `sliders`
 --
 ALTER TABLE `sliders`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
