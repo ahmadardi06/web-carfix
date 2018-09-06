@@ -1,3 +1,5 @@
+require('dotenv')config();
+
 var express = require('express');
 var router = express.Router();
 
@@ -92,6 +94,10 @@ router.get('/eventnnews-form/:id', (req, res, next)=>{
 		};
 		res.render('eventnnews-form', {formData: formData})
 	})
+})
+
+router.post('/api/upload', upload.single('file'), (req, res, next)=>{
+	res.json({link: process.env.URL_HOST+'assets/images/article/'+req.file.filename});
 })
 
 router.post('/add', upload.single('file'), (req, res, next)=>{
