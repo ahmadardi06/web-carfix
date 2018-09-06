@@ -2,17 +2,15 @@ extends layout-front
 
 block content-front
   section.section-padding(style="margin-top: 64px")
-    .container
-      .row(style="text-align: center")
-        .col-md-12
-          h1.animated.wow.fadeInDown(data-wow-delay='.4s') Produk CARfix
-          
+    .container    
       .row
         .col-md-12.Material-title-section.wow.animated.fadeInLeft(data-wow-delay='.2s')
           h1.section-title Sparepart
           h6 CARfix bermitra dengan beberapa produk keluaran produsen otomotif
             | ternama seperti Michelin, Shell dan Incoe. Selain produk tersebut,
             | CARfix juga menyediakan berbagai sparepart sesuai kendaraan dan kebutuhan Anda!
+          br
+
         #Material-portfolio.portfolio-item-wrapper.clearfix.wow.animated.fadeInUp.col-md-12(data-wow-delay='.5s')
           .row
             .col-6.col-lg-4.col-xl-4.pb-4.mix.business
@@ -45,11 +43,13 @@ block content-front
                   a(href='#')
                     h2.subtitle Incoe
                   p Incoe.
+      hr
       .row
         .col-md-12.Material-title-section.wow.animated.fadeInLeft(data-wow-delay='.7s')
           h1.section-title Jasa / Produk Servis
           h6 Selain menyediakan sparepart diatas, CARfix juga melayani berbagai
             | jasa service untuk all merk mobil, meliputi :
+          br
         .portfolio-item-wrapper.clearfix.wow.animated.fadeInUp.col-md-12(data-wow-delay='.10s')
           .row         
             .col-6.col-lg-3.col-xl-3.pb-3.mix.business

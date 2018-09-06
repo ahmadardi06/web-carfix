@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express');
 var router = express.Router();
 
@@ -38,7 +40,7 @@ router.get('/form', (req, res, next)=>{
 		title: '',
 		description: '',
 		file: '',
-		action: env.URL_HOST+'sliders-backend/add',
+		action: process.env.URL_HOST+'sliders-backend/add',
 	};
 	res.render('sliders-form', {formData: formData})
 })
@@ -51,7 +53,7 @@ router.get('/form/:id', (req, res, next)=>{
 			title: rows[0].title,
 			description: rows[0].description,
 			file: rows[0].file,
-			action: env.URL_HOST+'sliders-backend/update',
+			action: process.env.URL_HOST+'sliders-backend/update',
 		};
 		res.render('sliders-form', {formData: formData})
 	})

@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 var express = require('express');
 var router = express.Router();
 
@@ -38,7 +40,7 @@ router.get('/form', (req, res, next)=>{
 		title: '',
 		description: '',
 		file: '',
-		action: 'http://localhost:3000/promo-backend/add',
+		action: process.env.URL_HOST+'promo-backend/add',
 	};
 	res.render('promo-form', {formData: formData})
 })
@@ -51,7 +53,7 @@ router.get('/form/:id', (req, res, next)=>{
 			title: rows[0].title,
 			description: rows[0].description,
 			file: rows[0].file,
-			action: 'http://localhost:3000/promo-backend/update',
+			action: process.env.URL_HOST+'promo-backend/update',
 		};
 		res.render('promo-form', {formData: formData})
 	})
@@ -105,6 +107,14 @@ router.get('/display/:id/:display', (req, res, next)=>{
 		if(err) throw new Error(err);
 		res.redirect('/promo-backend/index')
 	});
+})
+
+router.get('/api/all', (req, res, next)=>{
+	var mPromo = new tPromo();
+	mPromo.find("all", {where: "display = 'y'"}, (err, rows, fields)=>{
+		if(err) throw new Error(err)
+		res.json(rows)
+	})
 })
 
 module.exports = router;

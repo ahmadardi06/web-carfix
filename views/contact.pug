@@ -35,9 +35,6 @@ block content-front
                   p
                     span.material-icons.mdi.mdi-phone 
                     | (024) 7603001, 7603002, 7603003
-                  p 
-                    span.material-icons.mdi.mdi-cellphone
-                    |  08157708070
                   p
                     span.material-icons.mdi.mdi-whatsapp
                     |  08157708070
@@ -131,18 +128,27 @@ block content-front
                 |  Send Message
               #msgSubmit.h3.text-center.hidden
               .clearfix
-  //- section.call-to-action-section
-  //-   .container
-  //-     .row.justify-content-between
-  //-       .col-md-8.col-lg-8.col-xs-12.text-left.wow.animated.fadeInLeft(data-wow-delay='.2s')
-  //-         h1 Call Us @02-9114147
-  //-         h3 Enjoy our 24/7 support
-  //-       .col-md-4.col-lg-4.col-xs-12.mt-4.text-right.wow.animated.fadeInRight(data-wow-delay='.3s')
-  //-         a.animated4.btn.btn-common(href='javascript:void(0)')
-  //-           i.material-icons.mdi.mdi-phone
-  //-           |  Contact us
   section#google-map-area
     .container-fluid
       .row
         .col-12
           #conatiner-map
+  br
+
+  script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxNnor6k7j9FZu4Lvj92i0C72UuPyr0Rw&callback=initMap",
+  type="text/javascript")
+  script.
+    var map;
+    function initMap() {
+      var idMap = document.getElementById('conatiner-map');
+      map = new google.maps.Map(idMap, {
+        center: {lat: -6.983087, lng: 110.393332},
+        zoom: 15
+      });
+      var myLatLng = {lat: -6.983087, lng: 110.393332};
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Head Office Carfix'
+      });
+    }
