@@ -1,0 +1,50 @@
+extend layout-backend
+
+block content-back
+  section.content-header
+    h1
+      | List All Users
+      small you can manage the users
+    ol.breadcrumb
+      li
+        a(href=env.URL_HOST+'administrator/dashboard')
+          i.fa.fa-dashboard
+          |  Home
+      li
+        a(href=env.URL_HOST+'users-backend/index') Users
+      li.active Data tables
+
+  .content
+    .row
+      .col-xs-12
+        .box
+          .box-header
+            a.btn.btn-primary(href=env.URL_HOST+'users-backend/form') 
+              i.fa.fa-plus
+              | &nbsp; Add User
+          .box-body
+            table.dataTableDynamic.table.table-bordered.table-striped
+              thead
+                tr
+                  th ID
+                  th Name
+                  th Email
+                  th Username
+                  th Role
+                  th action
+              tbody
+                each dd, i in dataUsers
+                  tr
+                    td= (i+1)
+                    td= dd.name
+                    td= dd.email
+                    td= dd.username
+                    td= dd.role
+                    td
+                      a.btn.btn-sm.btn-warning(href=env.URL_HOST+'users-backend/form/'+dd.id)
+                        i.fa.fa-edit
+                        | &nbsp; update
+                      | &nbsp;
+                      a.btn.btn-sm.btn-danger(href=env.URL_HOST+'users-backend/remove/'+dd.id)
+                        i.fa.fa-edit
+                        | &nbsp; delete
