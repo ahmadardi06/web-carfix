@@ -3,19 +3,18 @@ var express = require('express');
 var router = express.Router();
 
 var Db = require('../configs/database');
-var TNetworks = Db.extend({tableName: "networks"});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  var mNetworks = new TNetworks();
-	mNetworks.find((err, rows, fields)=>{
+  var mNetworks = "select * from networks";
+	Db.query(mNetworks, (err, rows, fields)=>{
 		res.render('networks-index', {dataNetworks: rows});
 	})
 });
 
 router.get('/index', (req, res, next)=>{
-	var mNetworks = new TNetworks();
-	mNetworks.find((err, rows, fields)=>{
+	var mNetworks = "select * from networks";
+	Db.query(mNetworks, (err, rows, fields)=>{
 		res.render('networks-index', {dataNetworks: rows});
 	})
 })
@@ -31,8 +30,8 @@ router.get('/form', (req, res, next)=>{
 })
 
 router.get('/form/:id', (req, res, next)=>{
-	var mNetworks = new TNetworks();
-	mNetworks.find('all', {where: "id = '"+req.params.id+"'"}, (err, rows, next)=>{
+	var mNetworks = "select * from networks where id = '"+req.params.id+"'";
+	Db.query(mNetworks, (err, rows, next)=>{
 		var formData = {
 			id: rows[0].id,
 			title: rows[0].title,
@@ -49,8 +48,8 @@ router.post('/add', (req, res, next)=>{
 		link: req.body.link,
 	};
 
-	var mNetworks = new TNetworks(formData);
-	mNetworks.save((err, rows, fields)=>{
+	var mNetworks = "insert into networks (title, link) values ('"+formData.title+"','"+formData.link+"')";
+	Db.query(mNetworks, (err, rows, fields)=>{
 		if(err) throw new Error(err);
 		res.redirect('/networks-backend/index');
 	});
@@ -63,25 +62,24 @@ router.post('/update', (req, res, next)=>{
 		link: req.body.link,
 	};
 
-	var mNetworks = new TNetworks();
 	var sql = "UPDATE networks SET title = '"+formData.title+"', link = '"+formData.link+"' WHERE id = '"+formData.id+"'";
-	mNetworks.query(sql, (err, rows, fields)=>{
+	Db.query(sql, (err, rows, fields)=>{
 		if(err) throw new Error(err);
 		res.redirect('/networks-backend/index');
 	});
 })
 
 router.get('/remove/:id', (req, res, next)=>{
-	var mNetworks = new TNetworks();
-	mNetworks.remove("id = '"+req.params.id+"'", (err, result)=>{
+	var mNetworks = "delete from networks where id = '"+req.params.id+"'";
+	Db.query(mNetworks, (err, result)=>{
 		if(err) throw new Error(err);
 		res.redirect('/networks-backend/index');
 	})
 })
 
 router.get('/api/all', (req, res, next)=>{
-	var mNetworks = new TNetworks();
-	mNetworks.find((err, rows, fields)=>{
+	var mNetworks = "select * from networks";
+	Db.query(mNetworks, (err, rows, fields)=>{
 		if(err) throw new Error(err)
 		res.json(rows)
 	})
