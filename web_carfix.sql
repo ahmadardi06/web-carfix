@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 05, 2018 at 12:15 PM
+-- Generation Time: Sep 06, 2018 at 10:56 AM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -74,6 +74,42 @@ INSERT INTO `networks` (`id`, `title`, `link`, `created_at`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL,
+  `title` varchar(128) DEFAULT NULL,
+  `file` varchar(256) DEFAULT NULL,
+  `description` varchar(128) DEFAULT NULL,
+  `product_type` enum('sparepart','service','etc') NOT NULL DEFAULT 'etc',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `title`, `file`, `description`, `product_type`, `created_at`) VALUES
+(2, 'Michelin', 'product-1536221345223.png', 'Produsen Otomotif Michelin', 'sparepart', '2018-09-06 08:09:05'),
+(3, 'Shell', 'product-1536221365183.png', 'Produsen Otomotif Shell', 'sparepart', '2018-09-06 08:09:25'),
+(4, 'Incoe', 'product-1536221380910.png', 'Produsen Otomotif Incoe', 'sparepart', '2018-09-06 08:09:40'),
+(5, 'Oli', 'product-1536221477281.png', 'Jual, Ganti Oli.', 'service', '2018-09-06 08:11:17'),
+(6, 'Battery', 'product-1536221518286.png', 'Battery', 'service', '2018-09-06 08:11:58'),
+(7, 'Tyre', 'product-1536222393273.png', 'Tyre', 'service', '2018-09-06 08:26:33'),
+(8, 'Shock Abs', 'product-1536222406248.png', 'Shock Abs', 'service', '2018-09-06 08:26:46'),
+(9, 'Spooring', 'product-1536222488417.png', 'Spooring', 'service', '2018-09-06 08:28:08'),
+(10, 'Brake', 'product-1536222501683.png', 'Brake', 'service', '2018-09-06 08:28:21'),
+(11, 'Engine', 'product-1536222514810.png', 'Engine', 'service', '2018-09-06 08:28:34'),
+(12, 'Gear', 'product-1536222525404.png', 'Gear', 'service', '2018-09-06 08:28:45'),
+(13, 'AC', 'product-1536222536391.png', 'AC', 'service', '2018-09-06 08:28:56'),
+(14, 'Electrical', 'product-1536222550028.png', 'Electrical', 'service', '2018-09-06 08:29:10'),
+(15, 'UV Ozone', 'product-1536222561848.png', 'UV Ozone', 'service', '2018-09-06 08:29:21'),
+(16, 'All Service', 'product-1536222577287.png', 'All Service', 'service', '2018-09-06 08:29:37');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `promo`
 --
 
@@ -118,6 +154,30 @@ INSERT INTO `sliders` (`id_slider`, `title`, `description`, `file`, `display`, `
 (11, ' ', ' ', 'slider-1536137370300.jpg', 'y', '2018-09-05 08:49:30'),
 (13, 'We Are Everywhere', 'temukan gerai CARfix di daerah anda', 'slider-1536137493957.JPG', 'y', '2018-09-05 08:51:33');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `name` varchar(256) DEFAULT NULL,
+  `email` varchar(256) DEFAULT NULL,
+  `username` varchar(256) NOT NULL,
+  `password` varchar(512) NOT NULL,
+  `role` enum('superadmin','admin','client') NOT NULL DEFAULT 'client',
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `username`, `password`, `role`, `created_at`) VALUES
+(1, 'CARfix Admin', 'admin@carfix.id', 'adminCARfix', '28112d2da54b1fbaa1a1ce9e796fd636', 'superadmin', '2018-09-06 04:18:00'),
+(2, 'Pak Eko', 'jurnalis@carfix.co.id', 'masukpakeko', '5e32cf16aa428d230e7f21fcf32d4ee1', 'admin', '2018-09-06 04:49:45');
+
 --
 -- Indexes for dumped tables
 --
@@ -135,6 +195,12 @@ ALTER TABLE `networks`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `promo`
 --
 ALTER TABLE `promo`
@@ -145,6 +211,12 @@ ALTER TABLE `promo`
 --
 ALTER TABLE `sliders`
   ADD PRIMARY KEY (`id_slider`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -160,7 +232,13 @@ ALTER TABLE `articles`
 -- AUTO_INCREMENT for table `networks`
 --
 ALTER TABLE `networks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `promo`
@@ -173,6 +251,12 @@ ALTER TABLE `promo`
 --
 ALTER TABLE `sliders`
   MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
