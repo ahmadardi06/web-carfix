@@ -75,53 +75,61 @@ block content-front
           .Material-tab
             ul#myTab.nav.nav-tabs.justify-content-center(role='tablist')
               li.nav-item
-                a.nav-link.active(data-toggle='tab', href='index.html#business', role='tab')
-                  i.mdi.mdi-account-multiple-outline
+                a.nav-link.active(data-toggle='tab', href='#who-panel', role='tab')
+                  i.mdi.mdi-comment-question-outline
                   br
-                  |  Business
+                  |  Who Are We
               li.nav-item
-                a.nav-link(data-toggle='tab', href='index.html#startup', role='tab')
-                  i.mdi.mdi-flash-outline
+                a.nav-link(data-toggle='tab', href='#why-panel', role='tab')
+                  i.mdi.mdi-trophy-outline
                   br
-                  | Startup
+                  | Why Choose Us
               li.nav-item
-                a.nav-link(data-toggle='tab', href='index.html#agency', role='tab')
-                  i.mdi.mdi-all-inclusive
+                a.nav-link(data-toggle='tab', href='#where-panel', role='tab')
+                  i.mdi.mdi-map-marker-outline
                   br
-                  |  Agency
+                  |  Where to Find
               li.nav-item
-                a.nav-link(data-toggle='tab', href='index.html#saas', role='tab')
-                  i.mdi.mdi-cloud-outline
+                a.nav-link(data-toggle='tab', href='#contact-panel', role='tab')
+                  i.mdi.mdi-contacts
                   br
-                  |  SaaS
+                  |  Reach Us
             .tab-content
-              #business.tab-pane.fade.show.active(role='tabpanel')
+              #who-panel.tab-pane.fade.show.active(role='tabpanel')
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  | CARfix merupakan jaringan bengkel modern yang berkonsep one stop servis yang menyediakan layanan jasa servis dan sparepart semua merk mobil dengan sistem komputerisasi terintegrasi, teknisi yang handal serta peralatan berteknologi terkini untuk memberikan hasil servis yang maksimal, terjamin kualitasnya dan bergaransi.
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.
-              #startup.tab-pane.fade(role='tabpanel')
+                  | Pengembangan jaringan bengkel mobil Carfix dibawah koordinasi management PT. Global Carfix Indonesia berkerjasama dengan PT. Meka Adipratama.
+              #why-panel.tab-pane.fade(role='tabpanel')
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  | Kami terlahir dengan prinsip "Transparant, Jujur, Bersih, dan Terbuka". Tema tersebut yang merupakan cerminan dari semangat kerja yang diaplikasikan dalam CARfix Operational Workshop.
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.
-              #agency.tab-pane.fade(role='tabpanel')
+                  | CARfix terhubung dengan aplikasi Carsworld, memungkinkan untuk akses yang lebih mudah di mana saja dan kapan saja.
+              #where-panel.tab-pane.fade(role='tabpanel')
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  | Kantor kami berpusat pada Jln Puspowarno Tengah 7-11 Semarang.
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.
-              #saas.tab-pane.fade(role='tabpanel')
+                  | Anda bisa menemukan cabang workshop CARfix 
+                  a.animated4.btn.btn-common(href='javascript:void(0)', data-ripple-color='#000')
+                    //- i.material-icons.mdi.mdi-lightbulb-outline
+                    |  di sini
+                    .ripple-container
+              #contact-panel.tab-pane.fade(role='tabpanel')
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam nesciunt dolores quibusdam, officia sed mollitia, illo, quis, vel veniam officiis qui repellendus. Perferendis et, veritatis enim voluptatem libero consequuntur eveniet alias nesciunt fugit doloremque tempora id Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  | Anda bisa menghubungi kami pada no. telepon berikut (024) 7603001, 7603002, 7603003; No. handphone berikut  +62 815 7708 070; Email info@carfix.co.id.
                 p
-                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, aut ut totam quam inventore suscipit ullam nostrum quisquam corrupti nesciunt voluptas necessitatibus, ab porro cupiditate optio mollitia, expedita, omnis? Quasi.
+                  | Untuk pemesanan produk / service, 
+                  a.animated4.btn.btn-common(href='http://kontakk.com/@carfix', data-ripple-color='#000')
+                    //- i.material-icons.mdi.mdi-lightbulb-outline
+                    |  di sini
+                    .ripple-container
         .col-md-12.col-lg-5.col-xs-12.welcome-column
           .video-gallery
-            img.img-fluid(src='assets/images/about/video.jpg', alt='')
+            img.img-fluid(src='assets/images/bengkel-carfix.jpg', alt='')
             .overlay-gallery
               .icon-holder
                 .icon
-                  a.video-popup.wow.fadeInUp(href='https://www.youtube.com/watch?v=r44RKWyfcFw', data-wow-duration='1000ms', data-wow-delay='0.3s')
+                  a.video-popup.wow.fadeInUp(href='https://www.youtube.com/watch?v=3OJTvUP2dOM', data-wow-duration='1000ms', data-wow-delay='0.3s')
                     i.mdi.mdi-play-circle-outline
 
   section.Material-service-section.section-padding
@@ -189,80 +197,80 @@ block content-front
     .container
       .row
         .col-md-4.col-lg-4.col-xl-6.Material-title-section.wow.animated.fadeInLeft(data-wow-delay='.2s')
-          h1.section-title Featured Works
-        .col-md-8.col-lg-8.col-xl-6.portfolio-nav.mb-3.wow.animated.fadeInRight(data-wow-delay='.2s')
-          ul.nav.nav-pills
-            li
-              a.filter.active(data-filter='all') All
-            li
-              a.filter(data-filter='.business') Business
-            li
-              a.filter(data-filter='.development') Development
-            li
-              a.filter(data-filter='.creative') Creative
-            li
-              a.filter(data-filter='.more') More
-        #Material-portfolio.portfolio-item-wrapper.clearfix.wow.animated.fadeInUp(data-wow-delay='.5s')
-          .col-md-6.col-lg-4.col-xl-4.pb-4.mix.business
-            figure.single-portfolio
-              img.img-fluid(src='assets/images/portfolio/work1.jpg', alt='')
-              figcaption.hover-content
-                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                  i.material-icons.mdi.mdi-arrow-right
-                  .ripple-container
-                a(href='portfolio-single.html')
-                  h2.subtitle Business Cards
-                p Asus Inc.
-          .col-md-6.col-lg-4.col-xl-4.mix.development.more
-            figure.single-portfolio
-              img.img-fluid(src='assets/images/portfolio/work2.jpg', alt='')
-              figcaption.hover-content
-                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                  i.material-icons.mdi.mdi-arrow-right
-                  .ripple-container
-                a(href='portfolio-single.html')
-                  h2.subtitle Brochure Design
-                p Tesla Motors
-          .col-md-6.col-lg-4.col-xl-4.mix.creative.business
-            figure.single-portfolio
-              img.img-fluid(src='assets/images/portfolio/work3.jpg', alt='')
-              figcaption.hover-content
-                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                  i.material-icons.mdi.mdi-arrow-right
-                  .ripple-container
-                a(href='portfolio-single.html')
-                  h2.subtitle Coffee Cup
-                p Starbucks USA
-          .col-md-6.col-lg-4.col-xl-4.mix.creative.more.development
-            figure.single-portfolio
-              img.img-fluid(src='assets/images/portfolio/work4.jpg', alt='')
-              figcaption.hover-content
-                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                  i.material-icons.mdi.mdi-arrow-right
-                  .ripple-container
-                a(href='portfolio-single.html')
-                  h2.subtitle Landing Page
-                p Uniliver, India
-          .col-md-6.col-lg-4.col-xl-4.mix.more.development
-            figure.single-portfolio
-              img.img-fluid(src='assets/images/portfolio/work5.jpg', alt='')
-              figcaption.hover-content
-                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                  i.material-icons.mdi.mdi-arrow-right
-                  .ripple-container
-                a(href='portfolio-single.html')
-                  h2.subtitle Dashboard Design
-                p Linode Inc.
-          .col-md-6.col-lg-4.col-xl-4.mix.creative.business
-            figure.single-portfolio
-              img.img-fluid(src='assets/images/portfolio/work6.jpg', alt='')
-              figcaption.hover-content
-                a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
-                  i.material-icons.mdi.mdi-arrow-right
-                  .ripple-container
-                a(href='portfolio-single.html')
-                  h2.subtitle Re-Branding
-                p Alphabet Inc.
+          h1.section-title Find Us on Socmed
+        //- .col-md-8.col-lg-8.col-xl-6.portfolio-nav.mb-3.wow.animated.fadeInRight(data-wow-delay='.2s')
+        //-   ul.nav.nav-pills
+        //-     li
+        //-       a.filter.active(data-filter='all') All
+        //-     li
+        //-       a.filter(data-filter='.business') Business
+        //-     li
+        //-       a.filter(data-filter='.development') Development
+        //-     li
+        //-       a.filter(data-filter='.creative') Creative
+        //-     li
+        //-       a.filter(data-filter='.more') More
+        //- #Material-portfolio.portfolio-item-wrapper.clearfix.wow.animated.fadeInUp(data-wow-delay='.5s')
+        //-   .col-md-6.col-lg-4.col-xl-4.pb-4.mix.business
+        //-     figure.single-portfolio
+        //-       img.img-fluid(src='assets/images/portfolio/work1.jpg', alt='')
+        //-       figcaption.hover-content
+        //-         a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+        //-           i.material-icons.mdi.mdi-arrow-right
+        //-           .ripple-container
+        //-         a(href='portfolio-single.html')
+        //-           h2.subtitle Business Cards
+        //-         p Asus Inc.
+        //-   .col-md-6.col-lg-4.col-xl-4.mix.development.more
+        //-     figure.single-portfolio
+        //-       img.img-fluid(src='assets/images/portfolio/work2.jpg', alt='')
+        //-       figcaption.hover-content
+        //-         a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+        //-           i.material-icons.mdi.mdi-arrow-right
+        //-           .ripple-container
+        //-         a(href='portfolio-single.html')
+        //-           h2.subtitle Brochure Design
+        //-         p Tesla Motors
+        //-   .col-md-6.col-lg-4.col-xl-4.mix.creative.business
+        //-     figure.single-portfolio
+        //-       img.img-fluid(src='assets/images/portfolio/work3.jpg', alt='')
+        //-       figcaption.hover-content
+        //-         a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+        //-           i.material-icons.mdi.mdi-arrow-right
+        //-           .ripple-container
+        //-         a(href='portfolio-single.html')
+        //-           h2.subtitle Coffee Cup
+        //-         p Starbucks USA
+        //-   .col-md-6.col-lg-4.col-xl-4.mix.creative.more.development
+        //-     figure.single-portfolio
+        //-       img.img-fluid(src='assets/images/portfolio/work4.jpg', alt='')
+        //-       figcaption.hover-content
+        //-         a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+        //-           i.material-icons.mdi.mdi-arrow-right
+        //-           .ripple-container
+        //-         a(href='portfolio-single.html')
+        //-           h2.subtitle Landing Page
+        //-         p Uniliver, India
+        //-   .col-md-6.col-lg-4.col-xl-4.mix.more.development
+        //-     figure.single-portfolio
+        //-       img.img-fluid(src='assets/images/portfolio/work5.jpg', alt='')
+        //-       figcaption.hover-content
+        //-         a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+        //-           i.material-icons.mdi.mdi-arrow-right
+        //-           .ripple-container
+        //-         a(href='portfolio-single.html')
+        //-           h2.subtitle Dashboard Design
+        //-         p Linode Inc.
+        //-   .col-md-6.col-lg-4.col-xl-4.mix.creative.business
+        //-     figure.single-portfolio
+        //-       img.img-fluid(src='assets/images/portfolio/work6.jpg', alt='')
+        //-       figcaption.hover-content
+        //-         a.btn.btn-round.btn-fab.btn-xs(href='portfolio-single.html')
+        //-           i.material-icons.mdi.mdi-arrow-right
+        //-           .ripple-container
+        //-         a(href='portfolio-single.html')
+        //-           h2.subtitle Re-Branding
+        //-         p Alphabet Inc.
       .row.mt-4.wow.animated.fadeInUp(data-wow-delay='.3s')
         .col-md-12.text-center
           a.animated4.btn.btn-common(href='javascript:void(0)', data-ripple-color='#000')
