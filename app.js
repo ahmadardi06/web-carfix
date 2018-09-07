@@ -27,6 +27,7 @@ var articlesBackendRouter = require('./routes/articles-backend');
 var productsBackendRouter = require('./routes/products-backend');
 var contactusBackendRouter = require('./routes/contactus-backend');
 var usersBackendRouter = require('./routes/users-backend');
+var profileBackendRouter = require('./routes/profile-backend');
 
 var app = express();
 require('dotenv').config();
@@ -65,6 +66,7 @@ app.use('/articles-backend', articlesBackendRouter);
 app.use('/products-backend', productsBackendRouter);
 app.use('/contactus-backend', contactusBackendRouter);
 app.use('/users-backend', usersBackendRouter);
+app.use('/profile-backend', profileBackendRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

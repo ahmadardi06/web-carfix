@@ -3,18 +3,33 @@ extend layout-backend
 block content-back
   section.content-header
     h1
-      | User dataUsers.username
-      small details
+      | User Detail
+      small current user logged
     ol.breadcrumb
       li
         a(href=env.URL_HOST+'administrator/dashboard')
           i.fa.fa-dashboard
           |  Home
-      li
-        a(href=env.URL_HOST+'networks-backend/index') Networks
-      li.active Data tables
 
   .content
     .row
-      .col-xs-12
+      .col-xs-12.col-lg-6
+        table.table
+          tbody
+            tr
+              th Name
+              td :
+              td= userData.name
+            tr
+              th Username
+              td :
+              td= userData.username
+            tr
+              th Email
+              td :
+              td= userData.email
+            tr
+              th Role
+              td :
+              td= userData.role
         
